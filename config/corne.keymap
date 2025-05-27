@@ -85,25 +85,14 @@
         // OS toggle: Switch between Mac (layers 0-7) and Windows (layers 8-15) mode
         os_toggle: os_toggle {
             compatible = "zmk,behavior-mod-morph";
-            label = "OS_TOGGLE";
             #binding-cells = <0>;
             bindings = <&to WIN_BASE>, <&to MAC_BASE>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        // Implements a behavior similar to the QMK swapper feature
-        swapper: swapper {
-            compatible = "zmk,behavior-tri-state";
-            label = "SWAPPER";
-            #binding-cells = <2>;
-            bindings = <&kt>, <&kp>, <&kt>;
-            timeout-ms = <3000>;
-        };
-
         // Reversed colon/semicolon (colon by default, semicolon with shift)
         rev_colon: reversed_colon {
             compatible = "zmk,behavior-mod-morph";
-            label = "REVERSED_COLON";
             #binding-cells = <0>;
             bindings = <&kp COLON>, <&kp SEMI>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -112,7 +101,6 @@
         // Left enclosure behavior (parenthesis by default, brace with shift)
         left_enclose: left_enclosure {
             compatible = "zmk,behavior-mod-morph";
-            label = "LEFT_ENCLOSE";
             #binding-cells = <0>;
             bindings = <&kp LPAR>, <&kp LBRC>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -121,7 +109,6 @@
         // Right enclosure behavior (parenthesis by default, brace with shift)
         right_enclose: right_enclosure {
             compatible = "zmk,behavior-mod-morph";
-            label = "RIGHT_ENCLOSE";
             #binding-cells = <0>;
             bindings = <&kp RPAR>, <&kp RBRC>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -130,7 +117,6 @@
         // Three backticks macro
         three_grave: three_grave_macro {
             compatible = "zmk,behavior-macro";
-            label = "THREE_GRAVE";
             #binding-cells = <0>;
             bindings = <&macro_tap &kp GRAVE &kp GRAVE &kp GRAVE>;
         };
@@ -138,7 +124,6 @@
         // Custom mod-tap with longer tapping term for space - Mac version
         lt_sp_mac: layer_tap_space_mac {
             compatible = "zmk,behavior-hold-tap";
-            label = "LAYER_TAP_SPACE_MAC";
             #binding-cells = <2>;
             flavor = "balanced";
             tapping-term-ms = <200>;
@@ -149,7 +134,6 @@
         // Custom mod-tap with longer tapping term for space - Windows version
         lt_sp_win: layer_tap_space_win {
             compatible = "zmk,behavior-hold-tap";
-            label = "LAYER_TAP_SPACE_WIN";
             #binding-cells = <2>;
             flavor = "balanced";
             tapping-term-ms = <200>;
@@ -304,7 +288,7 @@
 
         mac_nav_layer {
             bindings = <
-            &swapper LGUI GRAVE     &kp LC(LS(TAB))     &kp LG(W) &kp LC(TAB)     &swapper LALT TAB        &kp PG_UP   &kp HOME    &kp UP      &kp END     &kp LA(BSPC)
+            &kp LG(GRAVE)     &kp LC(LS(TAB))     &kp LG(W) &kp LC(TAB)     &kp LA(TAB)        &kp PG_UP   &kp HOME    &kp UP      &kp END     &kp LA(BSPC)
             &sk LGUI &sk LALT  &sk LCTRL &sk LSHFT &sl MAC_NAVWIN &kp PG_DN  &kp LEFT    &kp DOWN    &kp RIGHT   &kp SPACE
             &kp LG(Z)   &kp LG(X)     &kp LG(C)    &kp LG(V)    &kp LG(LS(Z))      &kp ESC     &kp BSPC    &kp RET     &kp TAB     &kp DEL
                         &kp LG(K)   &trans      &kp LG(T)                  &kp RET     &kp BSPC    &lt MAC_MDIA SEMI
@@ -378,7 +362,7 @@
 
         win_nav_layer {
             bindings = <
-            &swapper LGUI GRAVE     &kp LC(LS(TAB))     &kp LC(W) &kp LC(TAB)     &swapper LALT TAB        &kp PG_UP   &kp HOME    &kp UP      &kp END     &kp LC(BSPC)
+            &kp LG(GRAVE)     &kp LC(LS(TAB))     &kp LC(W) &kp LC(TAB)     &kp LA(TAB)        &kp PG_UP   &kp HOME    &kp UP      &kp END     &kp LC(BSPC)
             &sk LCTRL &sk LALT  &sk LGUI &sk LSHFT &sl WIN_NAVWIN &kp PG_DN  &kp LEFT    &kp DOWN    &kp RIGHT   &kp SPACE
             &kp LC(Z)   &kp LC(X)     &kp LC(C)    &kp LC(V)    &kp LC(Y)      &kp ESC     &kp BSPC    &kp RET     &kp TAB     &kp DEL
                         &kp LC(K)   &trans      &kp LC(T)                  &kp RET     &kp BSPC    &lt WIN_MDIA SEMI
