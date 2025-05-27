@@ -299,7 +299,7 @@
             &kp N1     &kp N2      &kp N3      &kp N4      &kp N5        &to MAC_NAVLH &kp F7    &kp F8      &kp F9      &kp F12         
             MAC_OS_GUI MAC_OS_ALT  MAC_OS_CTRL MAC_OS_SHFT &trans        &trans      &kp F4      &kp F5      &kp F6      &kp F11         
             &kp N6     &kp N7      &kp N8      &kp N9      &kp N0        &trans      &kp F1      &kp F2      &kp F3      &kp F10         
-                        &trans      &trans      &trans                    &trans      &kp CAPS    &trans
+                        &trans      &trans      &trans                    &trans      &kp CAPSLOCK    &trans
             >;
         };
 
@@ -373,7 +373,7 @@
             &kp N1     &kp N2      &kp N3      &kp N4      &kp N5        &to WIN_NAVLH &kp F7    &kp F8      &kp F9      &kp F12         
             WIN_OS_GUI WIN_OS_ALT  WIN_OS_CTRL WIN_OS_SHFT &trans        &trans      &kp F4      &kp F5      &kp F6      &kp F11         
             &kp N6     &kp N7      &kp N8      &kp N9      &kp N0        &trans      &kp F1      &kp F2      &kp F3      &kp F10         
-                        &trans      &trans      &trans                    &trans      &kp CAPS    &trans
+                        &trans      &trans      &trans                    &trans      &kp CAPSLOCK    &trans
             >;
         };
 
