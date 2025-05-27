@@ -41,8 +41,8 @@
 #define WIN_OS_GUI             &sk LCTRL  // Windows "GUI" is Ctrl key
 
 /* Common behaviors */
-#define SW_APP             &swapper LALT TAB  // Alt+Tab for window switching
-#define SW_WIN             &swapper LGUI GRAVE  // Cmd+` for Mac window switching
+#define SW_APP             &swapper_alt_tab  // Alt+Tab for window switching
+#define SW_WIN             &swapper_cmd_grave  // Cmd+` for Mac window switching
 #define PRV_TAB            &kp LC(LS(TAB))
 #define NXT_TAB            &kp LC(TAB)
 
@@ -90,11 +90,19 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        // Swapper behavior for Alt+Tab and Cmd+` functionality
-        swapper: swapper {
+        // Swapper behavior for Alt+Tab functionality
+        swapper_alt_tab: swapper_alt_tab {
             compatible = "zmk,behavior-tri-state";
-            #binding-cells = <2>;
-            bindings = <&kt>, <&kp>, <&kt>;
+            #binding-cells = <0>;
+            bindings = <&kt LALT>, <&kp TAB>, <&kt LALT>;
+            timeout-ms = <3000>;
+        };
+
+        // Swapper behavior for Cmd+` functionality  
+        swapper_cmd_grave: swapper_cmd_grave {
+            compatible = "zmk,behavior-tri-state";
+            #binding-cells = <0>;
+            bindings = <&kt LGUI>, <&kp GRAVE>, <&kt LGUI>;
             timeout-ms = <3000>;
         };
 
@@ -296,7 +304,7 @@
 
         mac_nav_layer {
             bindings = <
-            &swapper LGUI GRAVE     &kp LC(LS(TAB))     &kp LG(W) &kp LC(TAB)     &swapper LALT TAB        &kp PG_UP   &kp HOME    &kp UP      &kp END     &kp LA(BSPC)
+            &swapper_cmd_grave     &kp LC(LS(TAB))     &kp LG(W) &kp LC(TAB)     &swapper_alt_tab        &kp PG_UP   &kp HOME    &kp UP      &kp END     &kp LA(BSPC)
             &sk LGUI &sk LALT  &sk LCTRL &sk LSHFT &sl MAC_NAVWIN &kp PG_DN  &kp LEFT    &kp DOWN    &kp RIGHT   &kp SPACE
             &kp LG(Z)   &kp LG(X)     &kp LG(C)    &kp LG(V)    &kp LG(LS(Z))      &kp ESC     &kp BSPC    &kp RET     &kp TAB     &kp DEL
                         &kp LG(K)   &trans      &kp LG(T)                  &kp RET     &kp BSPC    &lt MAC_MDIA SEMI
@@ -370,7 +378,7 @@
 
         win_nav_layer {
             bindings = <
-            &swapper LGUI GRAVE     &kp LC(LS(TAB))     &kp LC(W) &kp LC(TAB)     &swapper LALT TAB        &kp PG_UP   &kp HOME    &kp UP      &kp END     &kp LC(BSPC)
+            &swapper_cmd_grave     &kp LC(LS(TAB))     &kp LC(W) &kp LC(TAB)     &swapper_alt_tab        &kp PG_UP   &kp HOME    &kp UP      &kp END     &kp LC(BSPC)
             &sk LCTRL &sk LALT  &sk LGUI &sk LSHFT &sl WIN_NAVWIN &kp PG_DN  &kp LEFT    &kp DOWN    &kp RIGHT   &kp SPACE
             &kp LC(Z)   &kp LC(X)     &kp LC(C)    &kp LC(V)    &kp LC(Y)      &kp ESC     &kp BSPC    &kp RET     &kp TAB     &kp DEL
                         &kp LC(K)   &trans      &kp LC(T)                  &kp RET     &kp BSPC    &lt WIN_MDIA SEMI
