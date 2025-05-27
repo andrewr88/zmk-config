@@ -333,7 +333,7 @@
         // MAC MEDIA LAYER (7)
         mac_mdia_layer {
             bindings = <
-            &bootloader &trans OS_TOGGLE &out OUT_TOG &trans       &kp C_AC_SCROLL_UP &kp C_PREV &kp C_MS_UP &kp C_NEXT &trans       
+            &bootloader &trans &os_toggle &out OUT_TOG &trans       &kp C_AC_SCROLL_UP &kp C_PREV &kp C_MS_UP &kp C_NEXT &trans       
             MAC_OS_GUI MAC_OS_ALT MAC_OS_CTRL MAC_OS_SHFT &trans   &kp C_AC_SCROLL_DOWN &kp C_MS_LEFT &kp C_MS_DOWN &kp C_MS_RIGHT &trans    
             &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_CLR   &kp C_MUTE &kp C_VOL_DN &kp C_PP &kp C_VOL_UP &trans          
                                     &trans &trans &trans                     &mkp MB3 &mkp MB1 &mkp MB2
@@ -407,7 +407,7 @@
         // WINDOWS MEDIA LAYER (15)
         win_mdia_layer {
             bindings = <
-            &bootloader &trans OS_TOGGLE &out OUT_TOG &trans       &kp C_AC_SCROLL_UP &kp C_PREV &kp C_MS_UP &kp C_NEXT &trans       
+            &bootloader &trans &os_toggle &out OUT_TOG &trans       &kp C_AC_SCROLL_UP &kp C_PREV &kp C_MS_UP &kp C_NEXT &trans       
             WIN_OS_GUI WIN_OS_ALT WIN_OS_CTRL WIN_OS_SHFT &trans   &kp C_AC_SCROLL_DOWN &kp C_MS_LEFT &kp C_MS_DOWN &kp C_MS_RIGHT &trans    
             &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_CLR   &kp C_MUTE &kp C_VOL_DN &kp C_PP &kp C_VOL_UP &trans          
                                     &trans &trans &trans                     &mkp MB3 &mkp MB1 &mkp MB2
