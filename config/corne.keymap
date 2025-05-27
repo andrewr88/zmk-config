@@ -90,6 +90,14 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
+        // Swapper behavior for Alt+Tab and Cmd+` functionality
+        swapper: swapper {
+            compatible = "zmk,behavior-tri-state";
+            #binding-cells = <2>;
+            bindings = <&kt>, <&kp>, <&kt>;
+            timeout-ms = <3000>;
+        };
+
         // Reversed colon/semicolon (colon by default, semicolon with shift)
         rev_colon: reversed_colon {
             compatible = "zmk,behavior-mod-morph";
@@ -288,7 +296,7 @@
 
         mac_nav_layer {
             bindings = <
-            &kp LG(GRAVE)     &kp LC(LS(TAB))     &kp LG(W) &kp LC(TAB)     &kp LA(TAB)        &kp PG_UP   &kp HOME    &kp UP      &kp END     &kp LA(BSPC)
+            &swapper LGUI GRAVE     &kp LC(LS(TAB))     &kp LG(W) &kp LC(TAB)     &swapper LALT TAB        &kp PG_UP   &kp HOME    &kp UP      &kp END     &kp LA(BSPC)
             &sk LGUI &sk LALT  &sk LCTRL &sk LSHFT &sl MAC_NAVWIN &kp PG_DN  &kp LEFT    &kp DOWN    &kp RIGHT   &kp SPACE
             &kp LG(Z)   &kp LG(X)     &kp LG(C)    &kp LG(V)    &kp LG(LS(Z))      &kp ESC     &kp BSPC    &kp RET     &kp TAB     &kp DEL
                         &kp LG(K)   &trans      &kp LG(T)                  &kp RET     &kp BSPC    &lt MAC_MDIA SEMI
@@ -362,7 +370,7 @@
 
         win_nav_layer {
             bindings = <
-            &kp LG(GRAVE)     &kp LC(LS(TAB))     &kp LC(W) &kp LC(TAB)     &kp LA(TAB)        &kp PG_UP   &kp HOME    &kp UP      &kp END     &kp LC(BSPC)
+            &swapper LGUI GRAVE     &kp LC(LS(TAB))     &kp LC(W) &kp LC(TAB)     &swapper LALT TAB        &kp PG_UP   &kp HOME    &kp UP      &kp END     &kp LC(BSPC)
             &sk LCTRL &sk LALT  &sk LGUI &sk LSHFT &sl WIN_NAVWIN &kp PG_DN  &kp LEFT    &kp DOWN    &kp RIGHT   &kp SPACE
             &kp LC(Z)   &kp LC(X)     &kp LC(C)    &kp LC(V)    &kp LC(Y)      &kp ESC     &kp BSPC    &kp RET     &kp TAB     &kp DEL
                         &kp LC(K)   &trans      &kp LC(T)                  &kp RET     &kp BSPC    &lt WIN_MDIA SEMI
