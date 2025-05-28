@@ -63,16 +63,16 @@
 #define KEY_FSLH           &kp FSLH
 
 /* Number Keys */
-#define NUM_1              &kp N1
-#define NUM_2              &kp N2
-#define NUM_3              &kp N3
-#define NUM_4              &kp N4
-#define NUM_5              &kp N5
-#define NUM_6              &kp N6
-#define NUM_7              &kp N7
-#define NUM_8              &kp N8
-#define NUM_9              &kp N9
-#define NUM_0              &kp N0
+#define KEY_1              &kp N1
+#define KEY_2              &kp N2
+#define KEY_3              &kp N3
+#define KEY_4              &kp N4
+#define KEY_5              &kp N5
+#define KEY_6              &kp N6
+#define KEY_7              &kp N7
+#define KEY_8              &kp N8
+#define KEY_9              &kp N9
+#define KEY_0              &kp N0
 
 /* Symbol Keys */
 #define SYM_MINUS          &kp MINUS
@@ -143,7 +143,7 @@
 #define BT_1               &bt BT_SEL 1
 #define BT_2               &bt BT_SEL 2
 #define BT_3               &bt BT_SEL 3
-#define BT_CLR             &bt BT_CLR
+#define BT_CLEAR           &bt BT_CLR
 
 /* Alt Layer Keys */
 #define ALT_Q              &kp LA(Q)
@@ -465,13 +465,13 @@
             label = "Num";
             bindings = <
             // ╭─────────┬─────────┬─────────┬─────────┬─────────╮   ╭─────────┬─────────┬─────────┬─────────┬─────────╮
-        BLANK    KEY_TAB   NAV_LEFT   KEY_DOT  NAV_RIGHT SYM_UNDER MAC_VSC_EVAL  NUM_7     NUM_8     NUM_9    SYM_PLUS    BLANK
+        BLANK    KEY_TAB   NAV_LEFT   KEY_DOT  NAV_RIGHT SYM_UNDER MAC_VSC_EVAL  KEY_7     KEY_8     KEY_9    SYM_PLUS    BLANK
             // ├─────────┼─────────┼─────────┼─────────┼─────────┤   ├─────────┼─────────┼─────────┼─────────┼─────────┤
-        BLANK  MAC_OS_CTRL MAC_OS_ALT MAC_OS_GUI MAC_OS_SHFT MAC_NAV_KEY REV_COLON  NUM_4     NUM_5     NUM_6   SYM_MINUS   BLANK
+        BLANK  MAC_OS_CTRL MAC_OS_ALT MAC_OS_GUI MAC_OS_SHFT MAC_NAV_KEY REV_COLON  KEY_4     KEY_5     KEY_6   SYM_MINUS   BLANK
             // ├─────────┼─────────┼─────────┼─────────┼─────────┤   ├─────────┼─────────┼─────────┼─────────┼─────────┤
-        BLANK   MAC_UNDO    BLANK    KEY_COMMA REV_COLON MAC_REDO  SYM_MINUS   NUM_1     NUM_2     NUM_3      BLANK      BLANK
+        BLANK   MAC_UNDO    BLANK    KEY_COMMA REV_COLON MAC_REDO  SYM_MINUS   KEY_1     KEY_2     KEY_3      BLANK      BLANK
             // ╰─────────┴─────────┼─────────┼─────────┼─────────┤   ├─────────┼─────────┼─────────┴─────────┴─────────╯
-                                     BLANK       BLANK      BLANK     KEY_RET   KEY_BSPC    NUM_0
+                                     BLANK       BLANK      BLANK     KEY_RET   KEY_BSPC    KEY_0
             //                     ╰─────────┴─────────┴─────────╯   ╰─────────┴─────────┴─────────╯
             >;
         };
@@ -480,11 +480,11 @@
             label = "Fun";
             bindings = <
             // ╭─────────┬─────────┬─────────┬─────────┬─────────╮   ╭─────────┬─────────┬─────────┬─────────┬─────────╮
-        BLANK     NUM_1     NUM_2     NUM_3     NUM_4     NUM_5   MAC_NAVLH_KEY FUN_F7    FUN_F8    FUN_F9   FUN_F12     BLANK
+        BLANK     KEY_1     KEY_2     KEY_3     KEY_4     KEY_5   MAC_NAVLH_KEY FUN_F7    FUN_F8    FUN_F9   FUN_F12     BLANK
             // ├─────────┼─────────┼─────────┼─────────┼─────────┤   ├─────────┼─────────┼─────────┼─────────┼─────────┤
         BLANK  MAC_OS_CTRL MAC_OS_ALT MAC_OS_GUI MAC_OS_SHFT  BLANK      BLANK     FUN_F4    FUN_F5    FUN_F6   FUN_F11     BLANK
             // ├─────────┼─────────┼─────────┼─────────┼─────────┤   ├─────────┼─────────┼─────────┼─────────┼─────────┤
-        BLANK     NUM_6     NUM_7     NUM_8     NUM_9     NUM_0      BLANK     FUN_F1    FUN_F2    FUN_F3   FUN_F10     BLANK
+        BLANK     KEY_6     KEY_7     KEY_8     KEY_9     KEY_0      BLANK     FUN_F1    FUN_F2    FUN_F3   FUN_F10     BLANK
             // ╰─────────┴─────────┼─────────┼─────────┼─────────┤   ├─────────┼─────────┼─────────┴─────────┴─────────╯
                                      BLANK       BLANK      BLANK      BLANK    KEY_CAPS    BLANK
             //                     ╰─────────┴─────────┴─────────╯   ╰─────────┴─────────┴─────────╯
@@ -545,7 +545,7 @@
             // ├─────────┼─────────┼─────────┼─────────┼─────────┤   ├─────────┼─────────┼─────────┼─────────┼─────────┤
         BLANK  MAC_OS_CTRL MAC_OS_ALT MAC_OS_GUI MAC_OS_SHFT  BLANK     BLANK   MED_VOL_DN MED_PLAY  MED_MUTE    BLANK      BLANK
             // ├─────────┼─────────┼─────────┼─────────┼─────────┤   ├─────────┼─────────┼─────────┼─────────┼─────────┤
-        BLANK     BT_0      BT_1      BT_2      BT_3     BT_CLR     BLANK     BLANK     BLANK     BLANK     BLANK      BLANK
+        BLANK     BT_0      BT_1      BT_2      BT_3     BT_CLEAR     BLANK     BLANK     BLANK     BLANK     BLANK      BLANK
             // ╰─────────┴─────────┼─────────┼─────────┼─────────┤   ├─────────┼─────────┼─────────┴─────────┴─────────╯
                                      BLANK       BLANK      BLANK      BLANK       BLANK       BLANK
             //                     ╰─────────┴─────────┴─────────╯   ╰─────────┴─────────┴─────────╯
@@ -587,13 +587,13 @@
             label = "WNum";
             bindings = <
             // ╭─────────┬─────────┬─────────┬─────────┬─────────╮   ╭─────────┬─────────┬─────────┬─────────┬─────────╮
-        BLANK    KEY_TAB   NAV_LEFT   KEY_DOT  NAV_RIGHT SYM_UNDER WIN_VSC_EVAL  NUM_7     NUM_8     NUM_9    SYM_PLUS    BLANK
+        BLANK    KEY_TAB   NAV_LEFT   KEY_DOT  NAV_RIGHT SYM_UNDER WIN_VSC_EVAL  KEY_7     KEY_8     KEY_9    SYM_PLUS    BLANK
             // ├─────────┼─────────┼─────────┼─────────┼─────────┤   ├─────────┼─────────┼─────────┼─────────┼─────────┤
-        BLANK  WIN_OS_CTRL WIN_OS_ALT WIN_OS_GUI WIN_OS_SHFT WIN_NAV_KEY REV_COLON  NUM_4     NUM_5     NUM_6   SYM_MINUS   BLANK
+        BLANK  WIN_OS_CTRL WIN_OS_ALT WIN_OS_GUI WIN_OS_SHFT WIN_NAV_KEY REV_COLON  KEY_4     KEY_5     KEY_6   SYM_MINUS   BLANK
             // ├─────────┼─────────┼─────────┼─────────┼─────────┤   ├─────────┼─────────┼─────────┼─────────┼─────────┤
-        BLANK   WIN_UNDO    BLANK    KEY_COMMA REV_COLON WIN_REDO  SYM_MINUS   NUM_1     NUM_2     NUM_3      BLANK      BLANK
+        BLANK   WIN_UNDO    BLANK    KEY_COMMA REV_COLON WIN_REDO  SYM_MINUS   KEY_1     KEY_2     KEY_3      BLANK      BLANK
             // ╰─────────┴─────────┼─────────┼─────────┼─────────┤   ├─────────┼─────────┼─────────┴─────────┴─────────╯
-                                     BLANK       BLANK      BLANK     KEY_RET   KEY_BSPC    NUM_0
+                                     BLANK       BLANK      BLANK     KEY_RET   KEY_BSPC    KEY_0
             //                     ╰─────────┴─────────┴─────────╯   ╰─────────┴─────────┴─────────╯
             >;
         };
@@ -602,11 +602,11 @@
             label = "WFun";
             bindings = <
             // ╭─────────┬─────────┬─────────┬─────────┬─────────╮   ╭─────────┬─────────┬─────────┬─────────┬─────────╮
-        BLANK     NUM_1     NUM_2     NUM_3     NUM_4     NUM_5   WIN_NAVLH_KEY FUN_F7    FUN_F8    FUN_F9   FUN_F12     BLANK
+        BLANK     KEY_1     KEY_2     KEY_3     KEY_4     KEY_5   WIN_NAVLH_KEY FUN_F7    FUN_F8    FUN_F9   FUN_F12     BLANK
             // ├─────────┼─────────┼─────────┼─────────┼─────────┤   ├─────────┼─────────┼─────────┼─────────┼─────────┤
         BLANK  WIN_OS_CTRL WIN_OS_ALT WIN_OS_GUI WIN_OS_SHFT  BLANK      BLANK     FUN_F4    FUN_F5    FUN_F6   FUN_F11     BLANK
             // ├─────────┼─────────┼─────────┼─────────┼─────────┤   ├─────────┼─────────┼─────────┼─────────┼─────────┤
-        BLANK     NUM_6     NUM_7     NUM_8     NUM_9     NUM_0      BLANK     FUN_F1    FUN_F2    FUN_F3   FUN_F10     BLANK
+        BLANK     KEY_6     KEY_7     KEY_8     KEY_9     KEY_0      BLANK     FUN_F1    FUN_F2    FUN_F3   FUN_F10     BLANK
             // ╰─────────┴─────────┼─────────┼─────────┼─────────┤   ├─────────┼─────────┼─────────┴─────────┴─────────╯
                                      BLANK       BLANK      BLANK      BLANK    KEY_CAPS    BLANK
             //                     ╰─────────┴─────────┴─────────╯   ╰─────────┴─────────┴─────────╯
@@ -667,11 +667,11 @@
             // ├─────────┼─────────┼─────────┼─────────┼─────────┤   ├─────────┼─────────┼─────────┼─────────┼─────────┤
         BLANK  WIN_OS_CTRL WIN_OS_ALT WIN_OS_GUI WIN_OS_SHFT  BLANK     BLANK   MED_VOL_DN MED_PLAY  MED_MUTE    BLANK      BLANK
             // ├─────────┼─────────┼─────────┼─────────┼─────────┤   ├─────────┼─────────┼─────────┼─────────┼─────────┤
-        BLANK     BT_0      BT_1      BT_2      BT_3     BT_CLR     BLANK     BLANK     BLANK     BLANK     BLANK      BLANK
+        BLANK     BT_0      BT_1      BT_2      BT_3     BT_CLEAR     BLANK     BLANK     BLANK     BLANK     BLANK      BLANK
             // ╰─────────┴─────────┼─────────┼─────────┼─────────┤   ├─────────┼─────────┼─────────┴─────────┴─────────╯
                                      BLANK       BLANK      BLANK      BLANK       BLANK       BLANK
             //                     ╰─────────┴─────────┴─────────╯   ╰─────────┴─────────┴─────────╯
             >;
         };
-        };
+    };
 };
