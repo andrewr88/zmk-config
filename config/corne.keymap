@@ -164,49 +164,49 @@
         // Mac mode combos
         combo_nei_ctrl_mac {
             timeout-ms = <50>;
-            key-positions = <15 16 17>; // N E I positions (3x5 layout)
+            key-positions = <16 17 18>; // N E I positions (3x6 layout with offset)
             bindings = <&sk LCTRL>;
             layers = <MAC_BASE MAC_SYMB MAC_NUM MAC_FUN MAC_NAV MAC_NAVWIN MAC_NAVLH>;
         };
 
         combo_commadot_semicolon_mac {
             timeout-ms = <50>;
-            key-positions = <27 28>; // Comma and Dot positions (3x5 layout)
+            key-positions = <33 34>; // Comma and Dot positions (3x6 layout with offset)
             bindings = <&kp SEMI>;
             layers = <MAC_BASE MAC_SYMB MAC_NUM MAC_FUN MAC_NAV MAC_NAVWIN MAC_NAVLH>;
         };
 
         combo_hcomma_hyphen_mac {
             timeout-ms = <50>;
-            key-positions = <15 27>; // H and Comma positions (3x5 layout)
+            key-positions = <16 33>; // H and Comma positions (3x6 layout with offset)
             bindings = <&kp MINUS>;
             layers = <MAC_BASE MAC_SYMB MAC_NUM MAC_FUN MAC_NAV MAC_NAVWIN MAC_NAVLH>;
         };
 
         combo_zd_tab_mac {
             timeout-ms = <50>;
-            key-positions = <20 12>; // Z and D positions (3x5 layout: Z=20, D=12)
+            key-positions = <25 15>; // Z and D positions (3x6 layout with offset)
             bindings = <&kp TAB>;
             layers = <MAC_BASE MAC_SYMB MAC_NUM MAC_FUN MAC_NAV MAC_NAVWIN MAC_NAVLH>;
         };
 
         combo_xd_ctrl_mac {
             timeout-ms = <50>;
-            key-positions = <21 12>; // X and D positions (3x5 layout: X=21, D=12)
+            key-positions = <26 15>; // X and D positions (3x6 layout with offset)
             bindings = <&sk LCTRL>;
             layers = <MAC_BASE MAC_SYMB MAC_NUM MAC_FUN MAC_NAV MAC_NAVWIN MAC_NAVLH>;
         };
 
         combo_dh_ctrl_mac {
             timeout-ms = <50>;
-            key-positions = <12 15>; // D and H positions (3x5 layout: D=12, H=15)
+            key-positions = <15 18>; // D and H positions (3x6 layout with offset)
             bindings = <&sk LCTRL>;
             layers = <MAC_BASE MAC_SYMB MAC_NUM MAC_FUN MAC_NAV MAC_NAVWIN MAC_NAVLH>;
         };
 
         combo_prev_next_select_all_mac {
             timeout-ms = <50>;
-            key-positions = <3 4>; // R and T positions (3x5 layout)
+            key-positions = <4 5>; // R and T positions (3x6 layout with offset)
             bindings = <&kp LG(A)>;
             layers = <MAC_BASE MAC_SYMB MAC_NUM MAC_FUN MAC_NAV MAC_NAVWIN MAC_NAVLH>;
         };
@@ -214,49 +214,49 @@
         // Windows mode combos (identical positions, different bindings)
         combo_nei_ctrl_win {
             timeout-ms = <50>;
-            key-positions = <15 16 17>; // N E I positions (3x5 layout)
+            key-positions = <16 17 18>; // N E I positions (3x6 layout with offset)
             bindings = <&sk LGUI>;
             layers = <WIN_BASE WIN_SYMB WIN_NUM WIN_FUN WIN_NAV WIN_NAVWIN WIN_NAVLH>;
         };
 
         combo_commadot_semicolon_win {
             timeout-ms = <50>;
-            key-positions = <27 28>; // Comma and Dot positions (3x5 layout)
+            key-positions = <33 34>; // Comma and Dot positions (3x6 layout with offset)
             bindings = <&kp SEMI>;
             layers = <WIN_BASE WIN_SYMB WIN_NUM WIN_FUN WIN_NAV WIN_NAVWIN WIN_NAVLH>;
         };
 
         combo_hcomma_hyphen_win {
             timeout-ms = <50>;
-            key-positions = <15 27>; // H and Comma positions (3x5 layout)
+            key-positions = <16 33>; // H and Comma positions (3x6 layout with offset)
             bindings = <&kp MINUS>;
             layers = <WIN_BASE WIN_SYMB WIN_NUM WIN_FUN WIN_NAV WIN_NAVWIN WIN_NAVLH>;
         };
 
         combo_zd_tab_win {
             timeout-ms = <50>;
-            key-positions = <20 12>; // Z and D positions (3x5 layout: Z=20, D=12)
+            key-positions = <25 15>; // Z and D positions (3x6 layout with offset)
             bindings = <&kp TAB>;
             layers = <WIN_BASE WIN_SYMB WIN_NUM WIN_FUN WIN_NAV WIN_NAVWIN WIN_NAVLH>;
         };
 
         combo_xd_ctrl_win {
             timeout-ms = <50>;
-            key-positions = <21 12>; // X and D positions (3x5 layout: X=21, D=12)
+            key-positions = <26 15>; // X and D positions (3x6 layout with offset)
             bindings = <&sk LGUI>;
             layers = <WIN_BASE WIN_SYMB WIN_NUM WIN_FUN WIN_NAV WIN_NAVWIN WIN_NAVLH>;
         };
 
         combo_dh_ctrl_win {
             timeout-ms = <50>;
-            key-positions = <12 15>; // D and H positions (3x5 layout: D=12, H=15)
+            key-positions = <15 18>; // D and H positions (3x6 layout with offset)
             bindings = <&sk LGUI>;
             layers = <WIN_BASE WIN_SYMB WIN_NUM WIN_FUN WIN_NAV WIN_NAVWIN WIN_NAVLH>;
         };
 
         combo_prev_next_select_all_win {
             timeout-ms = <50>;
-            key-positions = <3 4>; // R and T positions (3x5 layout)
+            key-positions = <4 5>; // R and T positions (3x6 layout with offset)
             bindings = <&kp LC(A)>;
             layers = <WIN_BASE WIN_SYMB WIN_NUM WIN_FUN WIN_NAV WIN_NAVWIN WIN_NAVLH>;
         };
@@ -267,149 +267,165 @@
 
         // MAC MODE LAYERS (0-7)
         mac_base_layer {
+            label = "Mac";
             bindings = <
-            &kp Q      &kp W      &kp E       &kp R       &kp T         &kp Y       &kp U       &kp I       &kp O       &kp P
-            &kp A      &kp S      &kp D       &kp F       &kp G         &kp H       &kp J       &kp K       &kp L       &lt MAC_MDIA SEMI
-            &kp Z      &kp X      &kp C       &kp V       &kp B         &kp N       &kp M       &kp COMMA   &kp DOT     &kp FSLH
-                        &mo MAC_FUN &mo MAC_NUM &lt_sp_mac MAC_NAV SPACE   &sk LSHFT &mo MAC_NAV &mo MAC_SYMB
+            &trans     &kp Q      &kp W      &kp E       &kp R       &kp T         &kp Y       &kp U       &kp I       &kp O       &kp P      &trans
+            &trans     &kp A      &kp S      &kp D       &kp F       &kp G         &kp H       &kp J       &kp K       &kp L       &lt MAC_MDIA SEMI &trans
+            &trans     &kp Z      &kp X      &kp C       &kp V       &kp B         &kp N       &kp M       &kp COMMA   &kp DOT     &kp FSLH   &trans
+                                  &mo MAC_FUN &mo MAC_NUM &lt_sp_mac MAC_NAV SPACE   &sk LSHFT &mo MAC_NAV &mo MAC_SYMB
             >;
         };
 
         mac_symb_layer {
+            label = "Sym";
             bindings = <
-            &kp MINUS  &kp UNDER   &kp EQUAL   &kp PLUS    &kp BSLH      &kp LG(Z)    &kp AMPS    &kp ASTRK   &kp DOT     &kp LG(V)
-            &kp SQT    &kp DQT     &left_enclose &right_enclose &kp GRAVE    &rev_colon   &sk LSHFT &sk LCTRL &sk LALT  &sk LGUI
-            &kp SEMI   &kp COLON   &kp LBKT    &kp RBKT    &three_grave   &kp MINUS   &kp EXCL    &kp LT      &kp GT      &kp QMARK
-                        &trans      &trans      &kp RET                   &trans      &trans      &trans
+            &trans     &kp MINUS  &kp UNDER   &kp EQUAL   &kp PLUS    &kp BSLH      &kp LG(Z)    &kp AMPS    &kp ASTRK   &kp DOT     &kp LG(V)  &trans
+            &trans     &kp SQT    &kp DQT     &left_enclose &right_enclose &kp GRAVE    &rev_colon   &sk LSHFT &sk LGUI &sk LALT  &sk LCTRL   &trans
+            &trans     &kp SEMI   &kp COLON   &kp LBKT    &kp RBKT    &three_grave   &kp MINUS   &kp EXCL    &kp LT      &kp GT      &kp QMARK  &trans
+                                  &trans      &trans      &kp RET                   &trans      &trans      &trans
             >;
         };
 
         mac_num_layer {
+            label = "Num";
             bindings = <
-            &kp TAB    &kp LEFT    &kp DOT     &kp RIGHT   &kp UNDER     &kp LG(LS(E)) &kp N7     &kp N8      &kp N9      &kp PLUS
-            &sk LGUI &sk LALT  &sk LCTRL &sk LSHFT &mo MAC_NAV   &rev_colon   &kp N4      &kp N5      &kp N6      &kp MINUS
-            &kp LG(Z)   &trans      &kp COMMA   &rev_colon   &kp LG(LS(Z))      &kp MINUS   &kp N1      &kp N2      &kp N3      &trans
-                        &trans      &trans      &trans                    &kp RET     &kp BSPC    &kp N0
+            &trans     &kp TAB    &kp LEFT    &kp DOT     &kp RIGHT   &kp UNDER     &kp LG(LS(E)) &kp N7     &kp N8      &kp N9      &kp PLUS   &trans
+            &trans     &sk LCTRL &sk LALT  &sk LGUI &sk LSHFT &mo MAC_NAV   &rev_colon   &kp N4      &kp N5      &kp N6      &kp MINUS  &trans
+            &trans     &kp LG(Z)   &trans      &kp COMMA   &rev_colon   &kp LG(LS(Z))      &kp MINUS   &kp N1      &kp N2      &kp N3      &trans     &trans
+                                  &trans      &trans      &trans                    &kp RET     &kp BSPC    &kp N0
             >;
         };
 
         mac_fun_layer {
+            label = "Fun";
             bindings = <
-            &kp N1     &kp N2      &kp N3      &kp N4      &kp N5        &to MAC_NAVLH &kp F7    &kp F8      &kp F9      &kp F12
-            &sk LGUI &sk LALT  &sk LCTRL &sk LSHFT &trans        &trans      &kp F4      &kp F5      &kp F6      &kp F11
-            &kp N6     &kp N7      &kp N8      &kp N9      &kp N0        &trans      &kp F1      &kp F2      &kp F3      &kp F10
-                        &trans      &trans      &trans                    &trans      &kp CAPSLOCK    &trans
+            &trans     &kp N1     &kp N2      &kp N3      &kp N4      &kp N5        &to MAC_NAVLH &kp F7    &kp F8      &kp F9      &kp F12    &trans
+            &trans     &sk LCTRL &sk LALT  &sk LGUI &sk LSHFT &trans        &trans      &kp F4      &kp F5      &kp F6      &kp F11    &trans
+            &trans     &kp N6     &kp N7      &kp N8      &kp N9      &kp N0        &trans      &kp F1      &kp F2      &kp F3      &kp F10    &trans
+                                  &trans      &trans      &trans                    &trans      &kp CAPSLOCK    &trans
             >;
         };
 
         mac_nav_layer {
+            label = "Nav";
             bindings = <
-            &swapper_cmd_grave     &kp LC(LS(TAB))     &kp LG(W) &kp LC(TAB)     &swapper_alt_tab        &kp PG_UP   &kp HOME    &kp UP      &kp END     &kp LA(BSPC)
-            &sk LGUI &sk LALT  &sk LCTRL &sk LSHFT &sl MAC_NAVWIN &kp PG_DN  &kp LEFT    &kp DOWN    &kp RIGHT   &kp SPACE
-            &kp LG(Z)   &kp LG(X)     &kp LG(C)    &kp LG(V)    &kp LG(LS(Z))      &kp ESC     &kp BSPC    &kp RET     &kp TAB     &kp DEL
-                        &kp LG(K)   &trans      &kp LG(T)                  &kp RET     &kp BSPC    &lt MAC_MDIA SEMI
+            &trans     &swapper_cmd_grave     &kp LC(LS(TAB))     &kp LG(W) &kp LC(TAB)     &swapper_alt_tab        &kp PG_UP   &kp HOME    &kp UP      &kp END     &kp LA(BSPC) &trans
+            &trans     &sk LCTRL &sk LALT  &sk LGUI &sk LSHFT &sl MAC_NAVWIN &kp PG_DN  &kp LEFT    &kp DOWN    &kp RIGHT   &kp SPACE    &trans
+            &trans     &kp LG(Z)   &kp LG(X)     &kp LG(C)    &kp LG(V)    &kp LG(LS(Z))      &kp ESC     &kp BSPC    &kp RET     &kp TAB     &kp DEL      &trans
+                                  &kp LG(K)   &trans      &kp LG(T)                  &kp RET     &kp BSPC    &lt MAC_MDIA SEMI
             >;
         };
 
         mac_navwin_layer {
+            label = "NavW";
             bindings = <
-            &kp LA(Q)  &kp LA(W)   &kp LA(F)   &kp LA(P)   &kp LA(B)     &kp LA(J)   &kp LA(N7)  &kp LA(N8)  &kp LA(N9)  &kp LA(SQT)
-            &sk LGUI &sk LALT  &sk LCTRL &sk LSHFT &trans        &kp LA(M)   &kp LA(N4)  &kp LA(N5)  &kp LA(N6)  &kp LA(O)
-            &kp LA(Z)  &kp LA(X)   &kp LA(C)   &kp LA(D)   &kp LA(V)     &kp LA(K)   &kp LA(N1)  &kp LA(N2)  &kp LA(N3)  &kp LA(FSLH)
-                        &trans      &trans      &trans                    &trans      &trans      &trans
+            &trans     &kp LA(Q)  &kp LA(W)   &kp LA(F)   &kp LA(P)   &kp LA(B)     &kp LA(J)   &kp LA(N7)  &kp LA(N8)  &kp LA(N9)  &kp LA(SQT) &trans
+            &trans     &sk LCTRL &sk LALT  &sk LGUI &sk LSHFT &trans        &kp LA(M)   &kp LA(N4)  &kp LA(N5)  &kp LA(N6)  &kp LA(O)   &trans
+            &trans     &kp LA(Z)  &kp LA(X)   &kp LA(C)   &kp LA(D)   &kp LA(V)     &kp LA(K)   &kp LA(N1)  &kp LA(N2)  &kp LA(N3)  &kp LA(FSLH) &trans
+                                  &trans      &trans      &trans                    &trans      &trans      &trans
             >;
         };
 
         mac_navlh_layer {
+            label = "NavL";
             bindings = <
-            &to MAC_BASE &kp HOME  &kp UP      &kp END     &kp PG_UP     &trans      &trans      &trans      &trans      &trans
-            &kp SPACE  &kp LEFT    &kp DOWN    &kp RIGHT   &kp PG_DN     &trans      &sk LSHFT &sk LCTRL &sk LALT  &sk LGUI
-            &kp DEL    &kp TAB     &kp RET     &kp BSPC    &kp ESC       &trans      &trans      &trans      &trans      &trans
-                        &to MAC_BASE &to MAC_BASE &trans                  &kp RET     &kp BSPC    &trans
+            &trans     &to MAC_BASE &kp HOME  &kp UP      &kp END     &kp PG_UP     &trans      &trans      &trans      &trans      &trans     &trans
+            &trans     &kp SPACE  &kp LEFT    &kp DOWN    &kp RIGHT   &kp PG_DN     &trans      &sk LSHFT &sk LGUI &sk LALT  &sk LCTRL  &trans
+            &trans     &kp DEL    &kp TAB     &kp RET     &kp BSPC    &kp ESC       &trans      &trans      &trans      &trans      &trans     &trans
+                                  &to MAC_BASE &to MAC_BASE &trans                  &kp RET     &kp BSPC    &trans
             >;
         };
 
         // MAC MEDIA LAYER (7)
         mac_mdia_layer {
+            label = "Media";
             bindings = <
-            &bootloader &trans &os_toggle &trans &trans       &trans &kp C_PREV &kp C_VOL_UP &kp C_NEXT &trans
-            &sk LGUI &sk LALT &sk LCTRL &sk LSHFT &trans   &trans &kp C_VOL_DN &kp C_PP &kp C_MUTE &trans
-            &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_CLR   &trans &trans &trans &trans &trans
-                                    &trans &trans &trans                     &trans &trans &trans
+            &trans     &bootloader &trans &os_toggle &trans &trans       &trans &kp C_PREV &kp C_VOL_UP &kp C_NEXT &trans      &trans
+            &trans     &sk LCTRL &sk LALT &sk LGUI &sk LSHFT &trans   &trans &kp C_VOL_DN &kp C_PP &kp C_MUTE &trans      &trans
+            &trans     &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_CLR   &trans &trans &trans &trans &trans      &trans
+                                       &trans &trans &trans                     &trans &trans &trans
             >;
         };
 
         // WINDOWS MODE LAYERS (8-14)
         win_base_layer {
+            label = "Win";
             bindings = <
-            &kp Q      &kp W      &kp E       &kp R       &kp T         &kp Y       &kp U       &kp I       &kp O       &kp P
-            &kp A      &kp S      &kp D       &kp F       &kp G         &kp H       &kp J       &kp K       &kp L       &lt WIN_MDIA SEMI
-            &kp Z      &kp X      &kp C       &kp V       &kp B         &kp N       &kp M       &kp COMMA   &kp DOT     &kp FSLH
-                        &mo WIN_FUN &mo WIN_NUM &lt_sp_win WIN_NAV SPACE   &sk LSHFT &mo WIN_NAV &mo WIN_SYMB
+            &trans     &kp Q      &kp W      &kp E       &kp R       &kp T         &kp Y       &kp U       &kp I       &kp O       &kp P      &trans
+            &trans     &kp A      &kp S      &kp D       &kp F       &kp G         &kp H       &kp J       &kp K       &kp L       &lt WIN_MDIA SEMI &trans
+            &trans     &kp Z      &kp X      &kp C       &kp V       &kp B         &kp N       &kp M       &kp COMMA   &kp DOT     &kp FSLH   &trans
+                                  &mo WIN_FUN &mo WIN_NUM &lt_sp_win WIN_NAV SPACE   &sk LSHFT &mo WIN_NAV &mo WIN_SYMB
             >;
         };
 
         win_symb_layer {
+            label = "WSym";
             bindings = <
-            &kp MINUS  &kp UNDER   &kp EQUAL   &kp PLUS    &kp BSLH      &kp LC(Z)    &kp AMPS    &kp ASTRK   &kp DOT     &kp LC(V)
-            &kp SQT    &kp DQT     &left_enclose &right_enclose &kp GRAVE    &rev_colon   &sk LSHFT &sk LGUI &sk LALT  &sk LCTRL
-            &kp SEMI   &kp COLON   &kp LBKT    &kp RBKT    &three_grave   &kp MINUS   &kp EXCL    &kp LT      &kp GT      &kp QMARK
-                        &trans      &trans      &kp RET                   &trans      &trans      &trans
+            &trans     &kp MINUS  &kp UNDER   &kp EQUAL   &kp PLUS    &kp BSLH      &kp LC(Z)    &kp AMPS    &kp ASTRK   &kp DOT     &kp LC(V)  &trans
+            &trans     &kp SQT    &kp DQT     &left_enclose &right_enclose &kp GRAVE    &rev_colon   &sk LSHFT &sk LCTRL &sk LALT  &sk LGUI  &trans
+            &trans     &kp SEMI   &kp COLON   &kp LBKT    &kp RBKT    &three_grave   &kp MINUS   &kp EXCL    &kp LT      &kp GT      &kp QMARK  &trans
+                                  &trans      &trans      &kp RET                   &trans      &trans      &trans
             >;
         };
 
         win_num_layer {
+            label = "WNum";
             bindings = <
-            &kp TAB    &kp LEFT    &kp DOT     &kp RIGHT   &kp UNDER     &kp LC(LS(E)) &kp N7     &kp N8      &kp N9      &kp PLUS
-            &sk LCTRL &sk LALT  &sk LGUI &sk LSHFT &mo WIN_NAV   &rev_colon   &kp N4      &kp N5      &kp N6      &kp MINUS
-            &kp LC(Z)   &trans      &kp COMMA   &rev_colon   &kp LC(Y)      &kp MINUS   &kp N1      &kp N2      &kp N3      &trans
-                        &trans      &trans      &trans                    &kp RET     &kp BSPC    &kp N0
+            &trans     &kp TAB    &kp LEFT    &kp DOT     &kp RIGHT   &kp UNDER     &kp LC(LS(E)) &kp N7     &kp N8      &kp N9      &kp PLUS   &trans
+            &trans     &sk LGUI &sk LALT  &sk LCTRL &sk LSHFT &mo WIN_NAV   &rev_colon   &kp N4      &kp N5      &kp N6      &kp MINUS  &trans
+            &trans     &kp LC(Z)   &trans      &kp COMMA   &rev_colon   &kp LC(Y)      &kp MINUS   &kp N1      &kp N2      &kp N3      &trans     &trans
+                                  &trans      &trans      &trans                    &kp RET     &kp BSPC    &kp N0
             >;
         };
 
         win_fun_layer {
+            label = "WFun";
             bindings = <
-            &kp N1     &kp N2      &kp N3      &kp N4      &kp N5        &to WIN_NAVLH &kp F7    &kp F8      &kp F9      &kp F12
-            &sk LCTRL &sk LALT  &sk LGUI &sk LSHFT &trans        &trans      &kp F4      &kp F5      &kp F6      &kp F11
-            &kp N6     &kp N7      &kp N8      &kp N9      &kp N0        &trans      &kp F1      &kp F2      &kp F3      &kp F10
-                        &trans      &trans      &trans                    &trans      &kp CAPSLOCK    &trans
+            &trans     &kp N1     &kp N2      &kp N3      &kp N4      &kp N5        &to WIN_NAVLH &kp F7    &kp F8      &kp F9      &kp F12    &trans
+            &trans     &sk LGUI &sk LALT  &sk LCTRL &sk LSHFT &trans        &trans      &kp F4      &kp F5      &kp F6      &kp F11    &trans
+            &trans     &kp N6     &kp N7      &kp N8      &kp N9      &kp N0        &trans      &kp F1      &kp F2      &kp F3      &kp F10    &trans
+                                  &trans      &trans      &trans                    &trans      &kp CAPSLOCK    &trans
             >;
         };
 
         win_nav_layer {
+            label = "WNav";
             bindings = <
-            &swapper_cmd_grave     &kp LC(LS(TAB))     &kp LC(W) &kp LC(TAB)     &swapper_alt_tab        &kp PG_UP   &kp HOME    &kp UP      &kp END     &kp LC(BSPC)
-            &sk LCTRL &sk LALT  &sk LGUI &sk LSHFT &sl WIN_NAVWIN &kp PG_DN  &kp LEFT    &kp DOWN    &kp RIGHT   &kp SPACE
-            &kp LC(Z)   &kp LC(X)     &kp LC(C)    &kp LC(V)    &kp LC(Y)      &kp ESC     &kp BSPC    &kp RET     &kp TAB     &kp DEL
-                        &kp LC(K)   &trans      &kp LC(T)                  &kp RET     &kp BSPC    &lt WIN_MDIA SEMI
+            &trans     &swapper_cmd_grave     &kp LC(LS(TAB))     &kp LC(W) &kp LC(TAB)     &swapper_alt_tab        &kp PG_UP   &kp HOME    &kp UP      &kp END     &kp LC(BSPC) &trans
+            &trans     &sk LGUI &sk LALT  &sk LCTRL &sk LSHFT &sl WIN_NAVWIN &kp PG_DN  &kp LEFT    &kp DOWN    &kp RIGHT   &kp SPACE    &trans
+            &trans     &kp LC(Z)   &kp LC(X)     &kp LC(C)    &kp LC(V)    &kp LC(Y)      &kp ESC     &kp BSPC    &kp RET     &kp TAB     &kp DEL      &trans
+                                  &kp LC(K)   &trans      &kp LC(T)                  &kp RET     &kp BSPC    &lt WIN_MDIA SEMI
             >;
         };
 
         win_navwin_layer {
+            label = "WNavW";
             bindings = <
-            &kp LA(Q)  &kp LA(W)   &kp LA(F)   &kp LA(P)   &kp LA(B)     &kp LA(J)   &kp LA(N7)  &kp LA(N8)  &kp LA(N9)  &kp LA(SQT)
-            &sk LCTRL &sk LALT  &sk LGUI &sk LSHFT &trans        &kp LA(M)   &kp LA(N4)  &kp LA(N5)  &kp LA(N6)  &kp LA(O)
-            &kp LA(Z)  &kp LA(X)   &kp LA(C)   &kp LA(D)   &kp LA(V)     &kp LA(K)   &kp LA(N1)  &kp LA(N2)  &kp LA(N3)  &kp LA(FSLH)
-                        &trans      &trans      &trans                    &trans      &trans      &trans
+            &trans     &kp LA(Q)  &kp LA(W)   &kp LA(F)   &kp LA(P)   &kp LA(B)     &kp LA(J)   &kp LA(N7)  &kp LA(N8)  &kp LA(N9)  &kp LA(SQT) &trans
+            &trans     &sk LGUI &sk LALT  &sk LCTRL &sk LSHFT &trans        &kp LA(M)   &kp LA(N4)  &kp LA(N5)  &kp LA(N6)  &kp LA(O)   &trans
+            &trans     &kp LA(Z)  &kp LA(X)   &kp LA(C)   &kp LA(D)   &kp LA(V)     &kp LA(K)   &kp LA(N1)  &kp LA(N2)  &kp LA(N3)  &kp LA(FSLH) &trans
+                                  &trans      &trans      &trans                    &trans      &trans      &trans
             >;
         };
 
         win_navlh_layer {
+            label = "WNavL";
             bindings = <
-            &to WIN_BASE &kp HOME  &kp UP      &kp END     &kp PG_UP     &trans      &trans      &trans      &trans      &trans
-            &kp SPACE  &kp LEFT    &kp DOWN    &kp RIGHT   &kp PG_DN     &trans      &sk LSHFT &sk LGUI &sk LALT  &sk LCTRL
-            &kp DEL    &kp TAB     &kp RET     &kp BSPC    &kp ESC       &trans      &trans      &trans      &trans      &trans
-                        &to WIN_BASE &to WIN_BASE &trans                  &kp RET     &kp BSPC    &trans
+            &trans     &to WIN_BASE &kp HOME  &kp UP      &kp END     &kp PG_UP     &trans      &trans      &trans      &trans      &trans     &trans
+            &trans     &kp SPACE  &kp LEFT    &kp DOWN    &kp RIGHT   &kp PG_DN     &trans      &sk LSHFT &sk LGUI &sk LALT  &sk LCTRL  &trans
+            &trans     &kp DEL    &kp TAB     &kp RET     &kp BSPC    &kp ESC       &trans      &trans      &trans      &trans      &trans     &trans
+                                  &to WIN_BASE &to WIN_BASE &trans                  &kp RET     &kp BSPC    &trans
             >;
         };
 
         // WINDOWS MEDIA LAYER (15)
         win_mdia_layer {
+            label = "WMedia";
             bindings = <
-            &bootloader &trans &os_toggle &trans &trans       &trans &kp C_PREV &kp C_VOL_UP &kp C_NEXT &trans
-            &sk LCTRL &sk LALT &sk LGUI &sk LSHFT &trans   &trans &kp C_VOL_DN &kp C_PP &kp C_MUTE &trans
-            &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_CLR   &trans &trans &trans &trans &trans
-                                    &trans &trans &trans                     &trans &trans &trans
+            &trans     &bootloader &trans &os_toggle &trans &trans       &trans &kp C_PREV &kp C_VOL_UP &kp C_NEXT &trans      &trans
+            &trans     &sk LGUI &sk LALT &sk LCTRL &sk LSHFT &trans   &trans &kp C_VOL_DN &kp C_PP &kp C_MUTE &trans      &trans
+            &trans     &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_CLR   &trans &trans &trans &trans &trans      &trans
+                                       &trans &trans &trans                     &trans &trans &trans
             >;
         };
     };
