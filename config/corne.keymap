@@ -28,56 +28,221 @@
 #define WIN_NAVLH   14
 #define WIN_MDIA    15
 
-/* Custom keycodes - Mac versions */
-#define MAC_OS_SHFT            &sk LSHFT
-#define MAC_OS_CTRL            &sk LCTRL
-#define MAC_OS_ALT             &sk LALT
-#define MAC_OS_GUI             &sk LGUI
+/* Common Key Aliases (OS-independent) */
+#define BLANK              &trans
 
-/* Custom keycodes - Windows versions (GUI and CTRL swapped) */
-#define WIN_OS_SHFT            &sk LSHFT
-#define WIN_OS_CTRL            &sk LGUI  // Windows "Ctrl" is GUI key
-#define WIN_OS_ALT             &sk LALT
-#define WIN_OS_GUI             &sk LCTRL  // Windows "GUI" is Ctrl key
+/* Letter Keys */
+#define KEY_Q              &kp Q
+#define KEY_W              &kp W
+#define KEY_E              &kp E
+#define KEY_R              &kp R
+#define KEY_T              &kp T
+#define KEY_Y              &kp Y
+#define KEY_U              &kp U
+#define KEY_I              &kp I
+#define KEY_O              &kp O
+#define KEY_P              &kp P
+#define KEY_A              &kp A
+#define KEY_S              &kp S
+#define KEY_D              &kp D
+#define KEY_F              &kp F
+#define KEY_G              &kp G
+#define KEY_H              &kp H
+#define KEY_J              &kp J
+#define KEY_K              &kp K
+#define KEY_L              &kp L
+#define KEY_Z              &kp Z
+#define KEY_X              &kp X
+#define KEY_C              &kp C
+#define KEY_V              &kp V
+#define KEY_B              &kp B
+#define KEY_N              &kp N
+#define KEY_M              &kp M
+#define KEY_COMMA          &kp COMMA
+#define KEY_DOT            &kp DOT
+#define KEY_FSLH           &kp FSLH
 
-/* Common behaviors */
-#define SW_APP             &swapper_alt_tab  // Alt+Tab for window switching
-#define SW_WIN             &swapper_cmd_grave  // Cmd+` for Mac window switching
-#define PRV_TAB            &kp LC(LS(TAB))
-#define NXT_TAB            &kp LC(TAB)
+/* Number Keys */
+#define NUM_1              &kp N1
+#define NUM_2              &kp N2
+#define NUM_3              &kp N3
+#define NUM_4              &kp N4
+#define NUM_5              &kp N5
+#define NUM_6              &kp N6
+#define NUM_7              &kp N7
+#define NUM_8              &kp N8
+#define NUM_9              &kp N9
+#define NUM_0              &kp N0
 
-/* Mac shortcuts */
-#define MAC_CLS_WIN        &kp LG(W)
+/* Symbol Keys */
+#define SYM_MINUS          &kp MINUS
+#define SYM_UNDER          &kp UNDER
+#define SYM_EQUAL          &kp EQUAL
+#define SYM_PLUS           &kp PLUS
+#define SYM_BSLH           &kp BSLH
+#define SYM_SQT            &kp SQT
+#define SYM_DQT            &kp DQT
+#define SYM_GRAVE          &kp GRAVE
+#define SYM_SEMI           &kp SEMI
+#define SYM_COLON          &kp COLON
+#define SYM_LBKT           &kp LBKT
+#define SYM_RBKT           &kp RBKT
+#define SYM_AMPS           &kp AMPS
+#define SYM_ASTRK          &kp ASTRK
+#define SYM_EXCL           &kp EXCL
+#define SYM_LT             &kp LT
+#define SYM_GT             &kp GT
+#define SYM_QMARK          &kp QMARK
+
+/* Function Keys */
+#define FUN_F1             &kp F1
+#define FUN_F2             &kp F2
+#define FUN_F3             &kp F3
+#define FUN_F4             &kp F4
+#define FUN_F5             &kp F5
+#define FUN_F6             &kp F6
+#define FUN_F7             &kp F7
+#define FUN_F8             &kp F8
+#define FUN_F9             &kp F9
+#define FUN_F10            &kp F10
+#define FUN_F11            &kp F11
+#define FUN_F12            &kp F12
+
+/* Navigation Keys */
+#define NAV_UP             &kp UP
+#define NAV_DOWN           &kp DOWN
+#define NAV_LEFT           &kp LEFT
+#define NAV_RIGHT          &kp RIGHT
+#define NAV_HOME           &kp HOME
+#define NAV_END            &kp END
+#define NAV_PGUP           &kp PG_UP
+#define NAV_PGDN           &kp PG_DN
+
+/* Common Keys */
+#define KEY_TAB            &kp TAB
+#define KEY_RET            &kp RET
+#define KEY_ESC            &kp ESC
+#define KEY_BSPC           &kp BSPC
+#define KEY_DEL            &kp DEL
+#define KEY_SPACE          &kp SPACE
+#define KEY_CAPS           &kp CAPSLOCK
+
+/* Media Keys */
+#define MED_PREV           &kp C_PREV
+#define MED_NEXT           &kp C_NEXT
+#define MED_PLAY           &kp C_PP
+#define MED_VOL_UP         &kp C_VOL_UP
+#define MED_VOL_DN         &kp C_VOL_DN
+#define MED_MUTE           &kp C_MUTE
+
+/* System Keys */
+#define SYS_BOOT           &bootloader
+
+/* Bluetooth Keys */
+#define BT_0               &bt BT_SEL 0
+#define BT_1               &bt BT_SEL 1
+#define BT_2               &bt BT_SEL 2
+#define BT_3               &bt BT_SEL 3
+#define BT_CLR             &bt BT_CLR
+
+/* Alt Layer Keys */
+#define ALT_Q              &kp LA(Q)
+#define ALT_W              &kp LA(W)
+#define ALT_F              &kp LA(F)
+#define ALT_P              &kp LA(P)
+#define ALT_B              &kp LA(B)
+#define ALT_J              &kp LA(J)
+#define ALT_M              &kp LA(M)
+#define ALT_K              &kp LA(K)
+#define ALT_Z              &kp LA(Z)
+#define ALT_X              &kp LA(X)
+#define ALT_C              &kp LA(C)
+#define ALT_D              &kp LA(D)
+#define ALT_V              &kp LA(V)
+#define ALT_O              &kp LA(O)
+#define ALT_SQT            &kp LA(SQT)
+#define ALT_FSLH           &kp LA(FSLH)
+#define ALT_N1             &kp LA(N1)
+#define ALT_N2             &kp LA(N2)
+#define ALT_N3             &kp LA(N3)
+#define ALT_N4             &kp LA(N4)
+#define ALT_N5             &kp LA(N5)
+#define ALT_N6             &kp LA(N6)
+#define ALT_N7             &kp LA(N7)
+#define ALT_N8             &kp LA(N8)
+#define ALT_N9             &kp LA(N9)
+
+/* OS-Specific Modifier Keys - Mac Mode */
+#define MAC_OS_SHFT        &sk LSHFT
+#define MAC_OS_CTRL        &sk LCTRL
+#define MAC_OS_ALT         &sk LALT
+#define MAC_OS_GUI         &sk LGUI
+
+/* OS-Specific Modifier Keys - Windows Mode (GUI and CTRL swapped) */
+#define WIN_OS_SHFT        &sk LSHFT
+#define WIN_OS_CTRL        &sk LGUI  // Windows "Ctrl" is GUI key
+#define WIN_OS_ALT         &sk LALT
+#define WIN_OS_GUI         &sk LCTRL  // Windows "GUI" is Ctrl key
+
+/* OS-Specific Layer Access Keys */
+#define MAC_FUN_KEY        &mo MAC_FUN
+#define MAC_NUM_KEY        &mo MAC_NUM
+#define MAC_NAV_KEY        &mo MAC_NAV
+#define MAC_SYMB_KEY       &mo MAC_SYMB
+#define MAC_NAVWIN_KEY     &sl MAC_NAVWIN
+#define MAC_NAVLH_KEY      &to MAC_NAVLH
+#define MAC_BASE_KEY       &to MAC_BASE
+#define MAC_SEMI_MDIA      &lt MAC_MDIA SEMI
+
+#define WIN_FUN_KEY        &mo WIN_FUN
+#define WIN_NUM_KEY        &mo WIN_NUM
+#define WIN_NAV_KEY        &mo WIN_NAV
+#define WIN_SYMB_KEY       &mo WIN_SYMB
+#define WIN_NAVWIN_KEY     &sl WIN_NAVWIN
+#define WIN_NAVLH_KEY      &to WIN_NAVLH
+#define WIN_BASE_KEY       &to WIN_BASE
+#define WIN_SEMI_MDIA      &lt WIN_MDIA SEMI
+
+/* OS-Specific Space Keys with Layer Tap */
+#define MAC_SPACE          &lt_sp_mac MAC_NAV SPACE
+#define WIN_SPACE          &lt_sp_win WIN_NAV SPACE
+
+/* OS-Specific Shortcuts - Mac */
 #define MAC_UNDO           &kp LG(Z)
 #define MAC_CUT            &kp LG(X)
 #define MAC_COPY           &kp LG(C)
-#define MAC_PSTE           &kp LG(V)
+#define MAC_PASTE          &kp LG(V)
 #define MAC_REDO           &kp LG(LS(Z))
+#define MAC_CLS_WIN        &kp LG(W)
 #define MAC_NWTB           &kp LG(T)
 #define MAC_MKLNK          &kp LG(K)
-#define MAC_SELECT_ALL     &kp LG(A)
 #define MAC_VSC_EVAL       &kp LG(LS(E))
 #define MAC_DWRD           &kp LA(BSPC)
 
-/* Windows/Linux shortcuts */
-#define WIN_CLS_WIN        &kp LC(W)
+/* OS-Specific Shortcuts - Windows/Linux */
 #define WIN_UNDO           &kp LC(Z)
 #define WIN_CUT            &kp LC(X)
 #define WIN_COPY           &kp LC(C)
-#define WIN_PSTE           &kp LC(V)
+#define WIN_PASTE          &kp LC(V)
 #define WIN_REDO           &kp LC(Y)
+#define WIN_CLS_WIN        &kp LC(W)
 #define WIN_NWTB           &kp LC(T)
 #define WIN_MKLNK          &kp LC(K)
-#define WIN_SELECT_ALL     &kp LC(A)
 #define WIN_VSC_EVAL       &kp LC(LS(E))
 #define WIN_DWRD           &kp LC(BSPC)
 
-/* Common custom behaviors */
-#define OS_TOGGLE          &os_toggle  // Toggle between Mac and Windows mode
+/* Tab Navigation */
+#define TAB_PREV           &kp LC(LS(TAB))
+#define TAB_NEXT           &kp LC(TAB)
+
+/* Custom Behaviors */
+#define OS_TOGGLE          &os_toggle
 #define REV_COLON          &rev_colon
 #define LEFT_ENCLOSE       &left_enclose
 #define RIGHT_ENCLOSE      &right_enclose
 #define THREE_GRAVE        &three_grave
+#define SW_APP             &swapper_alt_tab
+#define SW_WIN             &swapper_cmd_grave
 
 /* Custom behaviors */
 / {
@@ -262,77 +427,112 @@
         };
     };
 
-    keymap {
-        compatible = "zmk,keymap";
+        keymap {
+                compatible = "zmk,keymap";
 
         // MAC MODE LAYERS (0-7)
         mac_base_layer {
             label = "Mac";
             bindings = <
-            &trans     &kp Q      &kp W      &kp E       &kp R       &kp T         &kp Y       &kp U       &kp I       &kp O       &kp P      &trans
-            &trans     &kp A      &kp S      &kp D       &kp F       &kp G         &kp H       &kp J       &kp K       &kp L       &lt MAC_MDIA SEMI &trans
-            &trans     &kp Z      &kp X      &kp C       &kp V       &kp B         &kp N       &kp M       &kp COMMA   &kp DOT     &kp FSLH   &trans
-                                  &mo MAC_FUN &mo MAC_NUM &lt_sp_mac MAC_NAV SPACE   &sk LSHFT &mo MAC_NAV &mo MAC_SYMB
+            // ╭─────────┬─────────┬─────────┬─────────┬─────────╮   ╭─────────┬─────────┬─────────┬─────────┬─────────╮
+        BLANK     KEY_Q     KEY_W     KEY_E     KEY_R     KEY_T         KEY_Y     KEY_U     KEY_I     KEY_O     KEY_P        BLANK
+            // ├─────────┼─────────┼─────────┼─────────┼─────────┤   ├─────────┼─────────┼─────────┼─────────┼─────────┤
+        BLANK     KEY_A     KEY_S     KEY_D     KEY_F     KEY_G         KEY_H     KEY_J     KEY_K     KEY_L   MAC_SEMI_MDIA  BLANK
+            // ├─────────┼─────────┼─────────┼─────────┼─────────┤   ├─────────┼─────────┼─────────┼─────────┼─────────┤
+        BLANK     KEY_Z     KEY_X     KEY_C     KEY_V     KEY_B         KEY_N     KEY_M   KEY_COMMA  KEY_DOT   KEY_FSLH      BLANK
+            // ╰─────────┴─────────┼─────────┼─────────┼─────────┤   ├─────────┼─────────┼─────────┴─────────┴─────────╯
+                                   MAC_FUN_KEY MAC_NUM_KEY MAC_SPACE MAC_OS_SHFT MAC_NAV_KEY MAC_SYMB_KEY
+            //                     ╰─────────┴─────────┴─────────╯   ╰─────────┴─────────┴─────────╯
             >;
         };
 
         mac_symb_layer {
             label = "Sym";
             bindings = <
-            &trans     &kp MINUS  &kp UNDER   &kp EQUAL   &kp PLUS    &kp BSLH      &kp LG(Z)    &kp AMPS    &kp ASTRK   &kp DOT     &kp LG(V)  &trans
-            &trans     &kp SQT    &kp DQT     &left_enclose &right_enclose &kp GRAVE    &rev_colon   &sk LSHFT &sk LGUI &sk LALT  &sk LCTRL   &trans
-            &trans     &kp SEMI   &kp COLON   &kp LBKT    &kp RBKT    &three_grave   &kp MINUS   &kp EXCL    &kp LT      &kp GT      &kp QMARK  &trans
-                                  &trans      &trans      &kp RET                   &trans      &trans      &trans
+            // ╭─────────┬─────────┬─────────┬─────────┬─────────╮   ╭─────────┬─────────┬─────────┬─────────┬─────────╮
+        BLANK   SYM_MINUS SYM_UNDER SYM_EQUAL  SYM_PLUS  SYM_BSLH    MAC_UNDO  SYM_AMPS  SYM_ASTRK  KEY_DOT  MAC_PASTE   BLANK
+            // ├─────────┼─────────┼─────────┼─────────┼─────────┤   ├─────────┼─────────┼─────────┼─────────┼─────────┤
+        BLANK    SYM_SQT   SYM_DQT  LEFT_ENCLOSE RIGHT_ENCLOSE SYM_GRAVE REV_COLON MAC_OS_SHFT MAC_OS_GUI MAC_OS_ALT MAC_OS_CTRL BLANK
+            // ├─────────┼─────────┼─────────┼─────────┼─────────┤   ├─────────┼─────────┼─────────┼─────────┼─────────┤
+        BLANK   SYM_SEMI  SYM_COLON  SYM_LBKT   SYM_RBKT THREE_GRAVE SYM_MINUS  SYM_EXCL   SYM_LT    SYM_GT  SYM_QMARK   BLANK
+            // ╰─────────┴─────────┼─────────┼─────────┼─────────┤   ├─────────┼─────────┼─────────┴─────────┴─────────╯
+                                     BLANK       BLANK      KEY_RET     BLANK       BLANK       BLANK
+            //                     ╰─────────┴─────────┴─────────╯   ╰─────────┴─────────┴─────────╯
             >;
         };
 
         mac_num_layer {
             label = "Num";
             bindings = <
-            &trans     &kp TAB    &kp LEFT    &kp DOT     &kp RIGHT   &kp UNDER     &kp LG(LS(E)) &kp N7     &kp N8      &kp N9      &kp PLUS   &trans
-            &trans     &sk LCTRL &sk LALT  &sk LGUI &sk LSHFT &mo MAC_NAV   &rev_colon   &kp N4      &kp N5      &kp N6      &kp MINUS  &trans
-            &trans     &kp LG(Z)   &trans      &kp COMMA   &rev_colon   &kp LG(LS(Z))      &kp MINUS   &kp N1      &kp N2      &kp N3      &trans     &trans
-                                  &trans      &trans      &trans                    &kp RET     &kp BSPC    &kp N0
+            // ╭─────────┬─────────┬─────────┬─────────┬─────────╮   ╭─────────┬─────────┬─────────┬─────────┬─────────╮
+        BLANK    KEY_TAB   NAV_LEFT   KEY_DOT  NAV_RIGHT SYM_UNDER MAC_VSC_EVAL  NUM_7     NUM_8     NUM_9    SYM_PLUS    BLANK
+            // ├─────────┼─────────┼─────────┼─────────┼─────────┤   ├─────────┼─────────┼─────────┼─────────┼─────────┤
+        BLANK  MAC_OS_CTRL MAC_OS_ALT MAC_OS_GUI MAC_OS_SHFT MAC_NAV_KEY REV_COLON  NUM_4     NUM_5     NUM_6   SYM_MINUS   BLANK
+            // ├─────────┼─────────┼─────────┼─────────┼─────────┤   ├─────────┼─────────┼─────────┼─────────┼─────────┤
+        BLANK   MAC_UNDO    BLANK    KEY_COMMA REV_COLON MAC_REDO  SYM_MINUS   NUM_1     NUM_2     NUM_3      BLANK      BLANK
+            // ╰─────────┴─────────┼─────────┼─────────┼─────────┤   ├─────────┼─────────┼─────────┴─────────┴─────────╯
+                                     BLANK       BLANK      BLANK     KEY_RET   KEY_BSPC    NUM_0
+            //                     ╰─────────┴─────────┴─────────╯   ╰─────────┴─────────┴─────────╯
             >;
         };
 
         mac_fun_layer {
             label = "Fun";
             bindings = <
-            &trans     &kp N1     &kp N2      &kp N3      &kp N4      &kp N5        &to MAC_NAVLH &kp F7    &kp F8      &kp F9      &kp F12    &trans
-            &trans     &sk LCTRL &sk LALT  &sk LGUI &sk LSHFT &trans        &trans      &kp F4      &kp F5      &kp F6      &kp F11    &trans
-            &trans     &kp N6     &kp N7      &kp N8      &kp N9      &kp N0        &trans      &kp F1      &kp F2      &kp F3      &kp F10    &trans
-                                  &trans      &trans      &trans                    &trans      &kp CAPSLOCK    &trans
+            // ╭─────────┬─────────┬─────────┬─────────┬─────────╮   ╭─────────┬─────────┬─────────┬─────────┬─────────╮
+        BLANK     NUM_1     NUM_2     NUM_3     NUM_4     NUM_5   MAC_NAVLH_KEY FUN_F7    FUN_F8    FUN_F9   FUN_F12     BLANK
+            // ├─────────┼─────────┼─────────┼─────────┼─────────┤   ├─────────┼─────────┼─────────┼─────────┼─────────┤
+        BLANK  MAC_OS_CTRL MAC_OS_ALT MAC_OS_GUI MAC_OS_SHFT  BLANK      BLANK     FUN_F4    FUN_F5    FUN_F6   FUN_F11     BLANK
+            // ├─────────┼─────────┼─────────┼─────────┼─────────┤   ├─────────┼─────────┼─────────┼─────────┼─────────┤
+        BLANK     NUM_6     NUM_7     NUM_8     NUM_9     NUM_0      BLANK     FUN_F1    FUN_F2    FUN_F3   FUN_F10     BLANK
+            // ╰─────────┴─────────┼─────────┼─────────┼─────────┤   ├─────────┼─────────┼─────────┴─────────┴─────────╯
+                                     BLANK       BLANK      BLANK      BLANK    KEY_CAPS    BLANK
+            //                     ╰─────────┴─────────┴─────────╯   ╰─────────┴─────────┴─────────╯
             >;
         };
 
         mac_nav_layer {
             label = "Nav";
             bindings = <
-            &trans     &swapper_cmd_grave     &kp LC(LS(TAB))     &kp LG(W) &kp LC(TAB)     &swapper_alt_tab        &kp PG_UP   &kp HOME    &kp UP      &kp END     &kp LA(BSPC) &trans
-            &trans     &sk LCTRL &sk LALT  &sk LGUI &sk LSHFT &sl MAC_NAVWIN &kp PG_DN  &kp LEFT    &kp DOWN    &kp RIGHT   &kp SPACE    &trans
-            &trans     &kp LG(Z)   &kp LG(X)     &kp LG(C)    &kp LG(V)    &kp LG(LS(Z))      &kp ESC     &kp BSPC    &kp RET     &kp TAB     &kp DEL      &trans
-                                  &kp LG(K)   &trans      &kp LG(T)                  &kp RET     &kp BSPC    &lt MAC_MDIA SEMI
+            // ╭─────────┬─────────┬─────────┬─────────┬─────────╮   ╭─────────┬─────────┬─────────┬─────────┬─────────╮
+        BLANK    SW_WIN   TAB_PREV MAC_CLS_WIN TAB_NEXT   SW_APP    NAV_PGUP  NAV_HOME   NAV_UP    NAV_END  MAC_DWRD    BLANK
+            // ├─────────┼─────────┼─────────┼─────────┼─────────┤   ├─────────┼─────────┼─────────┼─────────┼─────────┤
+        BLANK  MAC_OS_CTRL MAC_OS_ALT MAC_OS_GUI MAC_OS_SHFT MAC_NAVWIN_KEY NAV_PGDN NAV_LEFT  NAV_DOWN NAV_RIGHT KEY_SPACE  BLANK
+            // ├─────────┼─────────┼─────────┼─────────┼─────────┤   ├─────────┼─────────┼─────────┼─────────┼─────────┤
+        BLANK   MAC_UNDO  MAC_CUT   MAC_COPY  MAC_PASTE MAC_REDO   KEY_ESC   KEY_BSPC  KEY_RET   KEY_TAB   KEY_DEL    BLANK
+            // ╰─────────┴─────────┼─────────┼─────────┼─────────┤   ├─────────┼─────────┼─────────┴─────────┴─────────╯
+                                   MAC_MKLNK    BLANK    MAC_NWTB   KEY_RET   KEY_BSPC MAC_SEMI_MDIA
+            //                     ╰─────────┴─────────┴─────────╯   ╰─────────┴─────────┴─────────╯
             >;
         };
 
         mac_navwin_layer {
             label = "NavW";
             bindings = <
-            &trans     &kp LA(Q)  &kp LA(W)   &kp LA(F)   &kp LA(P)   &kp LA(B)     &kp LA(J)   &kp LA(N7)  &kp LA(N8)  &kp LA(N9)  &kp LA(SQT) &trans
-            &trans     &sk LCTRL &sk LALT  &sk LGUI &sk LSHFT &trans        &kp LA(M)   &kp LA(N4)  &kp LA(N5)  &kp LA(N6)  &kp LA(O)   &trans
-            &trans     &kp LA(Z)  &kp LA(X)   &kp LA(C)   &kp LA(D)   &kp LA(V)     &kp LA(K)   &kp LA(N1)  &kp LA(N2)  &kp LA(N3)  &kp LA(FSLH) &trans
-                                  &trans      &trans      &trans                    &trans      &trans      &trans
+            // ╭─────────┬─────────┬─────────┬─────────┬─────────╮   ╭─────────┬─────────┬─────────┬─────────┬─────────╮
+        BLANK     ALT_Q     ALT_W     ALT_F     ALT_P     ALT_B      ALT_J     ALT_N7    ALT_N8    ALT_N9    ALT_SQT    BLANK
+            // ├─────────┼─────────┼─────────┼─────────┼─────────┤   ├─────────┼─────────┼─────────┼─────────┼─────────┤
+        BLANK  MAC_OS_CTRL MAC_OS_ALT MAC_OS_GUI MAC_OS_SHFT  BLANK     ALT_M     ALT_N4    ALT_N5    ALT_N6     ALT_O     BLANK
+            // ├─────────┼─────────┼─────────┼─────────┼─────────┤   ├─────────┼─────────┼─────────┼─────────┼─────────┤
+        BLANK     ALT_Z     ALT_X     ALT_C     ALT_D     ALT_V      ALT_K     ALT_N1    ALT_N2    ALT_N3   ALT_FSLH    BLANK
+            // ╰─────────┴─────────┼─────────┼─────────┼─────────┤   ├─────────┼─────────┼─────────┴─────────┴─────────╯
+                                     BLANK       BLANK      BLANK      BLANK       BLANK       BLANK
+            //                     ╰─────────┴─────────┴─────────╯   ╰─────────┴─────────┴─────────╯
             >;
         };
 
         mac_navlh_layer {
             label = "NavL";
             bindings = <
-            &trans     &to MAC_BASE &kp HOME  &kp UP      &kp END     &kp PG_UP     &trans      &trans      &trans      &trans      &trans     &trans
-            &trans     &kp SPACE  &kp LEFT    &kp DOWN    &kp RIGHT   &kp PG_DN     &trans      &sk LSHFT &sk LGUI &sk LALT  &sk LCTRL  &trans
-            &trans     &kp DEL    &kp TAB     &kp RET     &kp BSPC    &kp ESC       &trans      &trans      &trans      &trans      &trans     &trans
-                                  &to MAC_BASE &to MAC_BASE &trans                  &kp RET     &kp BSPC    &trans
+            // ╭─────────┬─────────┬─────────┬─────────┬─────────╮   ╭─────────┬─────────┬─────────┬─────────┬─────────╮
+        BLANK  MAC_BASE_KEY NAV_HOME   NAV_UP    NAV_END  NAV_PGUP     BLANK     BLANK     BLANK     BLANK     BLANK      BLANK
+            // ├─────────┼─────────┼─────────┼─────────┼─────────┤   ├─────────┼─────────┼─────────┼─────────┼─────────┤
+        BLANK   KEY_SPACE  NAV_LEFT  NAV_DOWN NAV_RIGHT NAV_PGDN     BLANK   MAC_OS_SHFT MAC_OS_GUI MAC_OS_ALT MAC_OS_CTRL BLANK
+            // ├─────────┼─────────┼─────────┼─────────┼─────────┤   ├─────────┼─────────┼─────────┼─────────┼─────────┤
+        BLANK    KEY_DEL   KEY_TAB   KEY_RET   KEY_BSPC  KEY_ESC      BLANK     BLANK     BLANK     BLANK     BLANK      BLANK
+            // ╰─────────┴─────────┼─────────┼─────────┼─────────┤   ├─────────┼─────────┼─────────┴─────────┴─────────╯
+                                 MAC_BASE_KEY MAC_BASE_KEY BLANK     KEY_RET   KEY_BSPC    BLANK
+            //                     ╰─────────┴─────────┴─────────╯   ╰─────────┴─────────┴─────────╯
             >;
         };
 
@@ -340,81 +540,121 @@
         mac_mdia_layer {
             label = "Media";
             bindings = <
-            &trans     &bootloader &trans &os_toggle &trans &trans       &trans &kp C_PREV &kp C_VOL_UP &kp C_NEXT &trans      &trans
-            &trans     &sk LCTRL &sk LALT &sk LGUI &sk LSHFT &trans   &trans &kp C_VOL_DN &kp C_PP &kp C_MUTE &trans      &trans
-            &trans     &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_CLR   &trans &trans &trans &trans &trans      &trans
-                                       &trans &trans &trans                     &trans &trans &trans
+            // ╭─────────┬─────────┬─────────┬─────────┬─────────╮   ╭─────────┬─────────┬─────────┬─────────┬─────────╮
+        BLANK   SYS_BOOT    BLANK   OS_TOGGLE   BLANK     BLANK      BLANK    MED_PREV MED_VOL_UP MED_NEXT    BLANK      BLANK
+            // ├─────────┼─────────┼─────────┼─────────┼─────────┤   ├─────────┼─────────┼─────────┼─────────┼─────────┤
+        BLANK  MAC_OS_CTRL MAC_OS_ALT MAC_OS_GUI MAC_OS_SHFT  BLANK     BLANK   MED_VOL_DN MED_PLAY  MED_MUTE    BLANK      BLANK
+            // ├─────────┼─────────┼─────────┼─────────┼─────────┤   ├─────────┼─────────┼─────────┼─────────┼─────────┤
+        BLANK     BT_0      BT_1      BT_2      BT_3     BT_CLR     BLANK     BLANK     BLANK     BLANK     BLANK      BLANK
+            // ╰─────────┴─────────┼─────────┼─────────┼─────────┤   ├─────────┼─────────┼─────────┴─────────┴─────────╯
+                                     BLANK       BLANK      BLANK      BLANK       BLANK       BLANK
+            //                     ╰─────────┴─────────┴─────────╯   ╰─────────┴─────────┴─────────╯
             >;
         };
 
-        // WINDOWS MODE LAYERS (8-14)
+        // WINDOWS MODE LAYERS (8-15)
         win_base_layer {
             label = "Win";
             bindings = <
-            &trans     &kp Q      &kp W      &kp E       &kp R       &kp T         &kp Y       &kp U       &kp I       &kp O       &kp P      &trans
-            &trans     &kp A      &kp S      &kp D       &kp F       &kp G         &kp H       &kp J       &kp K       &kp L       &lt WIN_MDIA SEMI &trans
-            &trans     &kp Z      &kp X      &kp C       &kp V       &kp B         &kp N       &kp M       &kp COMMA   &kp DOT     &kp FSLH   &trans
-                                  &mo WIN_FUN &mo WIN_NUM &lt_sp_win WIN_NAV SPACE   &sk LSHFT &mo WIN_NAV &mo WIN_SYMB
+            // ╭─────────┬─────────┬─────────┬─────────┬─────────╮   ╭─────────┬─────────┬─────────┬─────────┬─────────╮
+        BLANK     KEY_Q     KEY_W     KEY_E     KEY_R     KEY_T         KEY_Y     KEY_U     KEY_I     KEY_O     KEY_P        BLANK
+            // ├─────────┼─────────┼─────────┼─────────┼─────────┤   ├─────────┼─────────┼─────────┼─────────┼─────────┤
+        BLANK     KEY_A     KEY_S     KEY_D     KEY_F     KEY_G         KEY_H     KEY_J     KEY_K     KEY_L   WIN_SEMI_MDIA  BLANK
+            // ├─────────┼─────────┼─────────┼─────────┼─────────┤   ├─────────┼─────────┼─────────┼─────────┼─────────┤
+        BLANK     KEY_Z     KEY_X     KEY_C     KEY_V     KEY_B         KEY_N     KEY_M   KEY_COMMA  KEY_DOT   KEY_FSLH      BLANK
+            // ╰─────────┴─────────┼─────────┼─────────┼─────────┤   ├─────────┼─────────┼─────────┴─────────┴─────────╯
+                                    WIN_FUN_KEY WIN_NUM_KEY WIN_SPACE WIN_OS_SHFT WIN_NAV_KEY WIN_SYMB_KEY
+            //                     ╰─────────┴─────────┴─────────╯   ╰─────────┴─────────┴─────────╯
             >;
         };
 
         win_symb_layer {
             label = "WSym";
             bindings = <
-            &trans     &kp MINUS  &kp UNDER   &kp EQUAL   &kp PLUS    &kp BSLH      &kp LC(Z)    &kp AMPS    &kp ASTRK   &kp DOT     &kp LC(V)  &trans
-            &trans     &kp SQT    &kp DQT     &left_enclose &right_enclose &kp GRAVE    &rev_colon   &sk LSHFT &sk LCTRL &sk LALT  &sk LGUI  &trans
-            &trans     &kp SEMI   &kp COLON   &kp LBKT    &kp RBKT    &three_grave   &kp MINUS   &kp EXCL    &kp LT      &kp GT      &kp QMARK  &trans
-                                  &trans      &trans      &kp RET                   &trans      &trans      &trans
+            // ╭─────────┬─────────┬─────────┬─────────┬─────────╮   ╭─────────┬─────────┬─────────┬─────────┬─────────╮
+        BLANK   SYM_MINUS SYM_UNDER SYM_EQUAL  SYM_PLUS  SYM_BSLH    WIN_UNDO  SYM_AMPS  SYM_ASTRK  KEY_DOT  WIN_PASTE   BLANK
+            // ├─────────┼─────────┼─────────┼─────────┼─────────┤   ├─────────┼─────────┼─────────┼─────────┼─────────┤
+        BLANK    SYM_SQT   SYM_DQT  LEFT_ENCLOSE RIGHT_ENCLOSE SYM_GRAVE REV_COLON WIN_OS_SHFT WIN_OS_GUI WIN_OS_ALT WIN_OS_CTRL BLANK
+            // ├─────────┼─────────┼─────────┼─────────┼─────────┤   ├─────────┼─────────┼─────────┼─────────┼─────────┤
+        BLANK   SYM_SEMI  SYM_COLON  SYM_LBKT   SYM_RBKT THREE_GRAVE SYM_MINUS  SYM_EXCL   SYM_LT    SYM_GT  SYM_QMARK   BLANK
+            // ╰─────────┴─────────┼─────────┼─────────┼─────────┤   ├─────────┼─────────┼─────────┴─────────┴─────────╯
+                                     BLANK       BLANK      KEY_RET     BLANK       BLANK       BLANK
+            //                     ╰─────────┴─────────┴─────────╯   ╰─────────┴─────────┴─────────╯
             >;
         };
 
         win_num_layer {
             label = "WNum";
             bindings = <
-            &trans     &kp TAB    &kp LEFT    &kp DOT     &kp RIGHT   &kp UNDER     &kp LC(LS(E)) &kp N7     &kp N8      &kp N9      &kp PLUS   &trans
-            &trans     &sk LGUI &sk LALT  &sk LCTRL &sk LSHFT &mo WIN_NAV   &rev_colon   &kp N4      &kp N5      &kp N6      &kp MINUS  &trans
-            &trans     &kp LC(Z)   &trans      &kp COMMA   &rev_colon   &kp LC(Y)      &kp MINUS   &kp N1      &kp N2      &kp N3      &trans     &trans
-                                  &trans      &trans      &trans                    &kp RET     &kp BSPC    &kp N0
+            // ╭─────────┬─────────┬─────────┬─────────┬─────────╮   ╭─────────┬─────────┬─────────┬─────────┬─────────╮
+        BLANK    KEY_TAB   NAV_LEFT   KEY_DOT  NAV_RIGHT SYM_UNDER WIN_VSC_EVAL  NUM_7     NUM_8     NUM_9    SYM_PLUS    BLANK
+            // ├─────────┼─────────┼─────────┼─────────┼─────────┤   ├─────────┼─────────┼─────────┼─────────┼─────────┤
+        BLANK  WIN_OS_CTRL WIN_OS_ALT WIN_OS_GUI WIN_OS_SHFT WIN_NAV_KEY REV_COLON  NUM_4     NUM_5     NUM_6   SYM_MINUS   BLANK
+            // ├─────────┼─────────┼─────────┼─────────┼─────────┤   ├─────────┼─────────┼─────────┼─────────┼─────────┤
+        BLANK   WIN_UNDO    BLANK    KEY_COMMA REV_COLON WIN_REDO  SYM_MINUS   NUM_1     NUM_2     NUM_3      BLANK      BLANK
+            // ╰─────────┴─────────┼─────────┼─────────┼─────────┤   ├─────────┼─────────┼─────────┴─────────┴─────────╯
+                                     BLANK       BLANK      BLANK     KEY_RET   KEY_BSPC    NUM_0
+            //                     ╰─────────┴─────────┴─────────╯   ╰─────────┴─────────┴─────────╯
             >;
         };
 
         win_fun_layer {
             label = "WFun";
             bindings = <
-            &trans     &kp N1     &kp N2      &kp N3      &kp N4      &kp N5        &to WIN_NAVLH &kp F7    &kp F8      &kp F9      &kp F12    &trans
-            &trans     &sk LGUI &sk LALT  &sk LCTRL &sk LSHFT &trans        &trans      &kp F4      &kp F5      &kp F6      &kp F11    &trans
-            &trans     &kp N6     &kp N7      &kp N8      &kp N9      &kp N0        &trans      &kp F1      &kp F2      &kp F3      &kp F10    &trans
-                                  &trans      &trans      &trans                    &trans      &kp CAPSLOCK    &trans
+            // ╭─────────┬─────────┬─────────┬─────────┬─────────╮   ╭─────────┬─────────┬─────────┬─────────┬─────────╮
+        BLANK     NUM_1     NUM_2     NUM_3     NUM_4     NUM_5   WIN_NAVLH_KEY FUN_F7    FUN_F8    FUN_F9   FUN_F12     BLANK
+            // ├─────────┼─────────┼─────────┼─────────┼─────────┤   ├─────────┼─────────┼─────────┼─────────┼─────────┤
+        BLANK  WIN_OS_CTRL WIN_OS_ALT WIN_OS_GUI WIN_OS_SHFT  BLANK      BLANK     FUN_F4    FUN_F5    FUN_F6   FUN_F11     BLANK
+            // ├─────────┼─────────┼─────────┼─────────┼─────────┤   ├─────────┼─────────┼─────────┼─────────┼─────────┤
+        BLANK     NUM_6     NUM_7     NUM_8     NUM_9     NUM_0      BLANK     FUN_F1    FUN_F2    FUN_F3   FUN_F10     BLANK
+            // ╰─────────┴─────────┼─────────┼─────────┼─────────┤   ├─────────┼─────────┼─────────┴─────────┴─────────╯
+                                     BLANK       BLANK      BLANK      BLANK    KEY_CAPS    BLANK
+            //                     ╰─────────┴─────────┴─────────╯   ╰─────────┴─────────┴─────────╯
             >;
         };
 
         win_nav_layer {
             label = "WNav";
             bindings = <
-            &trans     &swapper_cmd_grave     &kp LC(LS(TAB))     &kp LC(W) &kp LC(TAB)     &swapper_alt_tab        &kp PG_UP   &kp HOME    &kp UP      &kp END     &kp LC(BSPC) &trans
-            &trans     &sk LGUI &sk LALT  &sk LCTRL &sk LSHFT &sl WIN_NAVWIN &kp PG_DN  &kp LEFT    &kp DOWN    &kp RIGHT   &kp SPACE    &trans
-            &trans     &kp LC(Z)   &kp LC(X)     &kp LC(C)    &kp LC(V)    &kp LC(Y)      &kp ESC     &kp BSPC    &kp RET     &kp TAB     &kp DEL      &trans
-                                  &kp LC(K)   &trans      &kp LC(T)                  &kp RET     &kp BSPC    &lt WIN_MDIA SEMI
+            // ╭─────────┬─────────┬─────────┬─────────┬─────────╮   ╭─────────┬─────────┬─────────┬─────────┬─────────╮
+        BLANK    SW_WIN   TAB_PREV WIN_CLS_WIN TAB_NEXT   SW_APP    NAV_PGUP  NAV_HOME   NAV_UP    NAV_END  WIN_DWRD    BLANK
+            // ├─────────┼─────────┼─────────┼─────────┼─────────┤   ├─────────┼─────────┼─────────┼─────────┼─────────┤
+        BLANK  WIN_OS_CTRL WIN_OS_ALT WIN_OS_GUI WIN_OS_SHFT WIN_NAVWIN_KEY NAV_PGDN NAV_LEFT  NAV_DOWN NAV_RIGHT KEY_SPACE  BLANK
+            // ├─────────┼─────────┼─────────┼─────────┼─────────┤   ├─────────┼─────────┼─────────┼─────────┼─────────┤
+        BLANK   WIN_UNDO  WIN_CUT   WIN_COPY  WIN_PASTE WIN_REDO   KEY_ESC   KEY_BSPC  KEY_RET   KEY_TAB   KEY_DEL    BLANK
+            // ╰─────────┴─────────┼─────────┼─────────┼─────────┤   ├─────────┼─────────┼─────────┴─────────┴─────────╯
+                                   WIN_MKLNK    BLANK    WIN_NWTB   KEY_RET   KEY_BSPC WIN_SEMI_MDIA
+            //                     ╰─────────┴─────────┴─────────╯   ╰─────────┴─────────┴─────────╯
             >;
         };
 
         win_navwin_layer {
             label = "WNavW";
             bindings = <
-            &trans     &kp LA(Q)  &kp LA(W)   &kp LA(F)   &kp LA(P)   &kp LA(B)     &kp LA(J)   &kp LA(N7)  &kp LA(N8)  &kp LA(N9)  &kp LA(SQT) &trans
-            &trans     &sk LGUI &sk LALT  &sk LCTRL &sk LSHFT &trans        &kp LA(M)   &kp LA(N4)  &kp LA(N5)  &kp LA(N6)  &kp LA(O)   &trans
-            &trans     &kp LA(Z)  &kp LA(X)   &kp LA(C)   &kp LA(D)   &kp LA(V)     &kp LA(K)   &kp LA(N1)  &kp LA(N2)  &kp LA(N3)  &kp LA(FSLH) &trans
-                                  &trans      &trans      &trans                    &trans      &trans      &trans
+            // ╭─────────┬─────────┬─────────┬─────────┬─────────╮   ╭─────────┬─────────┬─────────┬─────────┬─────────╮
+        BLANK     ALT_Q     ALT_W     ALT_F     ALT_P     ALT_B      ALT_J     ALT_N7    ALT_N8    ALT_N9    ALT_SQT    BLANK
+            // ├─────────┼─────────┼─────────┼─────────┼─────────┤   ├─────────┼─────────┼─────────┼─────────┼─────────┤
+        BLANK  WIN_OS_CTRL WIN_OS_ALT WIN_OS_GUI WIN_OS_SHFT  BLANK     ALT_M     ALT_N4    ALT_N5    ALT_N6     ALT_O     BLANK
+            // ├─────────┼─────────┼─────────┼─────────┼─────────┤   ├─────────┼─────────┼─────────┼─────────┼─────────┤
+        BLANK     ALT_Z     ALT_X     ALT_C     ALT_D     ALT_V      ALT_K     ALT_N1    ALT_N2    ALT_N3   ALT_FSLH    BLANK
+            // ╰─────────┴─────────┼─────────┼─────────┼─────────┤   ├─────────┼─────────┼─────────┴─────────┴─────────╯
+                                     BLANK       BLANK      BLANK      BLANK       BLANK       BLANK
+            //                     ╰─────────┴─────────┴─────────╯   ╰─────────┴─────────┴─────────╯
             >;
         };
 
         win_navlh_layer {
             label = "WNavL";
             bindings = <
-            &trans     &to WIN_BASE &kp HOME  &kp UP      &kp END     &kp PG_UP     &trans      &trans      &trans      &trans      &trans     &trans
-            &trans     &kp SPACE  &kp LEFT    &kp DOWN    &kp RIGHT   &kp PG_DN     &trans      &sk LSHFT &sk LGUI &sk LALT  &sk LCTRL  &trans
-            &trans     &kp DEL    &kp TAB     &kp RET     &kp BSPC    &kp ESC       &trans      &trans      &trans      &trans      &trans     &trans
-                                  &to WIN_BASE &to WIN_BASE &trans                  &kp RET     &kp BSPC    &trans
+            // ╭─────────┬─────────┬─────────┬─────────┬─────────╮   ╭─────────┬─────────┬─────────┬─────────┬─────────╮
+        BLANK  WIN_BASE_KEY NAV_HOME   NAV_UP    NAV_END  NAV_PGUP     BLANK     BLANK     BLANK     BLANK     BLANK      BLANK
+            // ├─────────┼─────────┼─────────┼─────────┼─────────┤   ├─────────┼─────────┼─────────┼─────────┼─────────┤
+        BLANK   KEY_SPACE  NAV_LEFT  NAV_DOWN NAV_RIGHT NAV_PGDN     BLANK   WIN_OS_SHFT WIN_OS_GUI WIN_OS_ALT WIN_OS_CTRL BLANK
+            // ├─────────┼─────────┼─────────┼─────────┼─────────┤   ├─────────┼─────────┼─────────┼─────────┼─────────┤
+        BLANK    KEY_DEL   KEY_TAB   KEY_RET   KEY_BSPC  KEY_ESC      BLANK     BLANK     BLANK     BLANK     BLANK      BLANK
+            // ╰─────────┴─────────┼─────────┼─────────┼─────────┤   ├─────────┼─────────┼─────────┴─────────┴─────────╯
+                                 WIN_BASE_KEY WIN_BASE_KEY BLANK     KEY_RET   KEY_BSPC    BLANK
+            //                     ╰─────────┴─────────┴─────────╯   ╰─────────┴─────────┴─────────╯
             >;
         };
 
@@ -422,11 +662,16 @@
         win_mdia_layer {
             label = "WMedia";
             bindings = <
-            &trans     &bootloader &trans &os_toggle &trans &trans       &trans &kp C_PREV &kp C_VOL_UP &kp C_NEXT &trans      &trans
-            &trans     &sk LGUI &sk LALT &sk LCTRL &sk LSHFT &trans   &trans &kp C_VOL_DN &kp C_PP &kp C_MUTE &trans      &trans
-            &trans     &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_CLR   &trans &trans &trans &trans &trans      &trans
-                                       &trans &trans &trans                     &trans &trans &trans
+            // ╭─────────┬─────────┬─────────┬─────────┬─────────╮   ╭─────────┬─────────┬─────────┬─────────┬─────────╮
+        BLANK   SYS_BOOT    BLANK   OS_TOGGLE   BLANK     BLANK      BLANK    MED_PREV MED_VOL_UP MED_NEXT    BLANK      BLANK
+            // ├─────────┼─────────┼─────────┼─────────┼─────────┤   ├─────────┼─────────┼─────────┼─────────┼─────────┤
+        BLANK  WIN_OS_CTRL WIN_OS_ALT WIN_OS_GUI WIN_OS_SHFT  BLANK     BLANK   MED_VOL_DN MED_PLAY  MED_MUTE    BLANK      BLANK
+            // ├─────────┼─────────┼─────────┼─────────┼─────────┤   ├─────────┼─────────┼─────────┼─────────┼─────────┤
+        BLANK     BT_0      BT_1      BT_2      BT_3     BT_CLR     BLANK     BLANK     BLANK     BLANK     BLANK      BLANK
+            // ╰─────────┴─────────┼─────────┼─────────┼─────────┤   ├─────────┼─────────┼─────────┴─────────┴─────────╯
+                                     BLANK       BLANK      BLANK      BLANK       BLANK       BLANK
+            //                     ╰─────────┴─────────┴─────────╯   ╰─────────┴─────────┴─────────╯
             >;
         };
-    };
+        };
 };
