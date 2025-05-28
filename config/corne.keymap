@@ -265,26 +265,9 @@
     keymap {
         compatible = "zmk,keymap";
 
-        // Layer labels for OLED displays
-        label-mac_base = "Mac";
-        label-mac_symb = "Sym";
-        label-mac_num = "Num"; 
-        label-mac_fun = "Fun";
-        label-mac_nav = "Nav";
-        label-mac_navwin = "NavW";
-        label-mac_navlh = "NavL";
-        label-mac_mdia = "Media";
-        label-win_base = "Win";
-        label-win_symb = "WSym";
-        label-win_num = "WNum";
-        label-win_fun = "WFun";
-        label-win_nav = "WNav";
-        label-win_navwin = "WNavW";
-        label-win_navlh = "WNavL";
-        label-win_mdia = "WMedia";
-
         // MAC MODE LAYERS (0-7)
         mac_base_layer {
+            label = "Mac";
             bindings = <
             &trans     &kp Q      &kp W      &kp E       &kp R       &kp T         &kp Y       &kp U       &kp I       &kp O       &kp P      &trans
             &trans     &kp A      &kp S      &kp D       &kp F       &kp G         &kp H       &kp J       &kp K       &kp L       &lt MAC_MDIA SEMI &trans
@@ -294,6 +277,7 @@
         };
 
         mac_symb_layer {
+            label = "Sym";
             bindings = <
             &trans     &kp MINUS  &kp UNDER   &kp EQUAL   &kp PLUS    &kp BSLH      &kp LG(Z)    &kp AMPS    &kp ASTRK   &kp DOT     &kp LG(V)  &trans
             &trans     &kp SQT    &kp DQT     &left_enclose &right_enclose &kp GRAVE    &rev_colon   &sk LSHFT &sk LGUI &sk LALT  &sk LCTRL   &trans
@@ -303,6 +287,7 @@
         };
 
         mac_num_layer {
+            label = "Num";
             bindings = <
             &trans     &kp TAB    &kp LEFT    &kp DOT     &kp RIGHT   &kp UNDER     &kp LG(LS(E)) &kp N7     &kp N8      &kp N9      &kp PLUS   &trans
             &trans     &sk LCTRL &sk LALT  &sk LGUI &sk LSHFT &mo MAC_NAV   &rev_colon   &kp N4      &kp N5      &kp N6      &kp MINUS  &trans
@@ -312,6 +297,7 @@
         };
 
         mac_fun_layer {
+            label = "Fun";
             bindings = <
             &trans     &kp N1     &kp N2      &kp N3      &kp N4      &kp N5        &to MAC_NAVLH &kp F7    &kp F8      &kp F9      &kp F12    &trans
             &trans     &sk LCTRL &sk LALT  &sk LGUI &sk LSHFT &trans        &trans      &kp F4      &kp F5      &kp F6      &kp F11    &trans
@@ -321,6 +307,7 @@
         };
 
         mac_nav_layer {
+            label = "Nav";
             bindings = <
             &trans     &swapper_cmd_grave     &kp LC(LS(TAB))     &kp LG(W) &kp LC(TAB)     &swapper_alt_tab        &kp PG_UP   &kp HOME    &kp UP      &kp END     &kp LA(BSPC) &trans
             &trans     &sk LCTRL &sk LALT  &sk LGUI &sk LSHFT &sl MAC_NAVWIN &kp PG_DN  &kp LEFT    &kp DOWN    &kp RIGHT   &kp SPACE    &trans
@@ -330,6 +317,7 @@
         };
 
         mac_navwin_layer {
+            label = "NavW";
             bindings = <
             &trans     &kp LA(Q)  &kp LA(W)   &kp LA(F)   &kp LA(P)   &kp LA(B)     &kp LA(J)   &kp LA(N7)  &kp LA(N8)  &kp LA(N9)  &kp LA(SQT) &trans
             &trans     &sk LCTRL &sk LALT  &sk LGUI &sk LSHFT &trans        &kp LA(M)   &kp LA(N4)  &kp LA(N5)  &kp LA(N6)  &kp LA(O)   &trans
@@ -339,6 +327,7 @@
         };
 
         mac_navlh_layer {
+            label = "NavL";
             bindings = <
             &trans     &to MAC_BASE &kp HOME  &kp UP      &kp END     &kp PG_UP     &trans      &trans      &trans      &trans      &trans     &trans
             &trans     &kp SPACE  &kp LEFT    &kp DOWN    &kp RIGHT   &kp PG_DN     &trans      &sk LSHFT &sk LGUI &sk LALT  &sk LCTRL  &trans
@@ -349,6 +338,7 @@
 
         // MAC MEDIA LAYER (7)
         mac_mdia_layer {
+            label = "Media";
             bindings = <
             &trans     &bootloader &trans &os_toggle &trans &trans       &trans &kp C_PREV &kp C_VOL_UP &kp C_NEXT &trans      &trans
             &trans     &sk LCTRL &sk LALT &sk LGUI &sk LSHFT &trans   &trans &kp C_VOL_DN &kp C_PP &kp C_MUTE &trans      &trans
@@ -359,6 +349,7 @@
 
         // WINDOWS MODE LAYERS (8-14)
         win_base_layer {
+            label = "Win";
             bindings = <
             &trans     &kp Q      &kp W      &kp E       &kp R       &kp T         &kp Y       &kp U       &kp I       &kp O       &kp P      &trans
             &trans     &kp A      &kp S      &kp D       &kp F       &kp G         &kp H       &kp J       &kp K       &kp L       &lt WIN_MDIA SEMI &trans
@@ -368,6 +359,7 @@
         };
 
         win_symb_layer {
+            label = "WSym";
             bindings = <
             &trans     &kp MINUS  &kp UNDER   &kp EQUAL   &kp PLUS    &kp BSLH      &kp LC(Z)    &kp AMPS    &kp ASTRK   &kp DOT     &kp LC(V)  &trans
             &trans     &kp SQT    &kp DQT     &left_enclose &right_enclose &kp GRAVE    &rev_colon   &sk LSHFT &sk LCTRL &sk LALT  &sk LGUI  &trans
@@ -377,6 +369,7 @@
         };
 
         win_num_layer {
+            label = "WNum";
             bindings = <
             &trans     &kp TAB    &kp LEFT    &kp DOT     &kp RIGHT   &kp UNDER     &kp LC(LS(E)) &kp N7     &kp N8      &kp N9      &kp PLUS   &trans
             &trans     &sk LGUI &sk LALT  &sk LCTRL &sk LSHFT &mo WIN_NAV   &rev_colon   &kp N4      &kp N5      &kp N6      &kp MINUS  &trans
@@ -386,6 +379,7 @@
         };
 
         win_fun_layer {
+            label = "WFun";
             bindings = <
             &trans     &kp N1     &kp N2      &kp N3      &kp N4      &kp N5        &to WIN_NAVLH &kp F7    &kp F8      &kp F9      &kp F12    &trans
             &trans     &sk LGUI &sk LALT  &sk LCTRL &sk LSHFT &trans        &trans      &kp F4      &kp F5      &kp F6      &kp F11    &trans
@@ -395,6 +389,7 @@
         };
 
         win_nav_layer {
+            label = "WNav";
             bindings = <
             &trans     &swapper_cmd_grave     &kp LC(LS(TAB))     &kp LC(W) &kp LC(TAB)     &swapper_alt_tab        &kp PG_UP   &kp HOME    &kp UP      &kp END     &kp LC(BSPC) &trans
             &trans     &sk LGUI &sk LALT  &sk LCTRL &sk LSHFT &sl WIN_NAVWIN &kp PG_DN  &kp LEFT    &kp DOWN    &kp RIGHT   &kp SPACE    &trans
@@ -404,6 +399,7 @@
         };
 
         win_navwin_layer {
+            label = "WNavW";
             bindings = <
             &trans     &kp LA(Q)  &kp LA(W)   &kp LA(F)   &kp LA(P)   &kp LA(B)     &kp LA(J)   &kp LA(N7)  &kp LA(N8)  &kp LA(N9)  &kp LA(SQT) &trans
             &trans     &sk LGUI &sk LALT  &sk LCTRL &sk LSHFT &trans        &kp LA(M)   &kp LA(N4)  &kp LA(N5)  &kp LA(N6)  &kp LA(O)   &trans
@@ -413,6 +409,7 @@
         };
 
         win_navlh_layer {
+            label = "WNavL";
             bindings = <
             &trans     &to WIN_BASE &kp HOME  &kp UP      &kp END     &kp PG_UP     &trans      &trans      &trans      &trans      &trans     &trans
             &trans     &kp SPACE  &kp LEFT    &kp DOWN    &kp RIGHT   &kp PG_DN     &trans      &sk LSHFT &sk LGUI &sk LALT  &sk LCTRL  &trans
@@ -423,6 +420,7 @@
 
         // WINDOWS MEDIA LAYER (15)
         win_mdia_layer {
+            label = "WMedia";
             bindings = <
             &trans     &bootloader &trans &os_toggle &trans &trans       &trans &kp C_PREV &kp C_VOL_UP &kp C_NEXT &trans      &trans
             &trans     &sk LGUI &sk LALT &sk LCTRL &sk LSHFT &trans   &trans &kp C_VOL_DN &kp C_PP &kp C_MUTE &trans      &trans
