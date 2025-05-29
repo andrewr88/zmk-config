@@ -466,7 +466,7 @@
             // ├─────────┼─────────┼─────────┼─────────┼─────────┤   ├─────────┼─────────┼─────────┼─────────┼─────────┤
         BLANK     KEY_Z     KEY_X     KEY_C     KEY_V     KEY_B         KEY_N     KEY_M   KEY_COMMA  KEY_DOT   KEY_FSLH      BLANK
             // ╰─────────┴─────────┼─────────┼─────────┼─────────┤   ├─────────┼─────────┼─────────┴─────────┴─────────╯
-                                   MAC_FUN_KEY MAC_SPACE MAC_NUM_KEY MAC_OS_SHFT MAC_NAV_KEY MAC_SYMB_KEY
+                                   MAC_FUN_KEY MAC_NUM_KEY MAC_SPACE MAC_OS_SHFT MAC_NAV_KEY MAC_SYMB_KEY
             //                     ╰─────────┴─────────┴─────────╯   ╰─────────┴─────────┴─────────╯
             >;
         };
@@ -588,7 +588,7 @@
             // ├─────────┼─────────┼─────────┼─────────┼─────────┤   ├─────────┼─────────┼─────────┼─────────┼─────────┤
         BLANK     KEY_Z     KEY_X     KEY_C     KEY_V     KEY_B         KEY_N     KEY_M   KEY_COMMA  KEY_DOT   KEY_FSLH      BLANK
             // ╰─────────┴─────────┼─────────┼─────────┼─────────┤   ├─────────┼─────────┼─────────┴─────────┴─────────╯
-                                    WIN_FUN_KEY WIN_SPACE WIN_NUM_KEY WIN_OS_SHFT WIN_NAV_KEY WIN_SYMB_KEY
+                                    WIN_FUN_KEY WIN_NUM_KEY WIN_SPACE WIN_OS_SHFT WIN_NAV_KEY WIN_SYMB_KEY
             //                     ╰─────────┴─────────┴─────────╯   ╰─────────┴─────────┴─────────╯
             >;
         };
