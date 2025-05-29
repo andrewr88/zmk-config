@@ -139,10 +139,10 @@
 #define SYS_BOOT           &bootloader
 
 /* Bluetooth Keys */
-#define BT_0               &bt BT_SEL 0
-#define BT_1               &bt BT_SEL 1
-#define BT_2               &bt BT_SEL 2
-#define BT_3               &bt BT_SEL 3
+#define BT_MAC_0           &bt_mac_0
+#define BT_WIN_1           &bt_win_1
+#define BT_WIN_2           &bt_win_2
+#define BT_WIN_3           &bt_win_3
 #define BT_CLEAR           &bt BT_CLR
 
 /* Alt Layer Keys */
@@ -320,6 +320,31 @@
             tapping-term-ms = <200>;
             quick-tap-ms = <150>;
             bindings = <&mo>, <&kp>;
+        };
+
+        // Smart Bluetooth selection macros that auto-switch OS modes
+        bt_mac_0: bt_mac_profile_0 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 0>, <&to MAC_BASE>;
+        };
+
+        bt_win_1: bt_win_profile_1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 1>, <&to WIN_BASE>;
+        };
+
+        bt_win_2: bt_win_profile_2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 2>, <&to WIN_BASE>;
+        };
+
+        bt_win_3: bt_win_profile_3 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 3>, <&to WIN_BASE>;
         };
     };
 
@@ -541,11 +566,11 @@
             label = "Media";
             bindings = <
             // ╭─────────┬─────────┬─────────┬─────────┬─────────╮   ╭─────────┬─────────┬─────────┬─────────┬─────────╮
-        BLANK   SYS_BOOT    BLANK   OS_TOGGLE   BLANK     BLANK      BLANK    MED_PREV MED_VOL_UP MED_NEXT    BLANK      BLANK
+        BLANK   SYS_BOOT    BLANK   OS_TOGGLE   BLANK     BLANK         BLANK    MED_PREV MED_PLAY  MED_NEXT    BLANK      BLANK
             // ├─────────┼─────────┼─────────┼─────────┼─────────┤   ├─────────┼─────────┼─────────┼─────────┼─────────┤
-        BLANK  MAC_OS_CTRL MAC_OS_ALT MAC_OS_GUI MAC_OS_SHFT  BLANK     BLANK   MED_VOL_DN MED_PLAY  MED_MUTE    BLANK      BLANK
+        BLANK  MAC_OS_CTRL MAC_OS_ALT MAC_OS_GUI MAC_OS_SHFT  BLANK     BLANK   MED_VOL_DN MED_MUTE  MED_VOL_UP    BLANK      BLANK
             // ├─────────┼─────────┼─────────┼─────────┼─────────┤   ├─────────┼─────────┼─────────┼─────────┼─────────┤
-        BLANK     BT_0      BT_1      BT_2      BT_3     BT_CLEAR     BLANK     BLANK     BLANK     BLANK     BLANK      BLANK
+        BLANK   BT_MAC_0   BT_WIN_1   BT_WIN_2   BT_WIN_3   BT_CLEAR    BLANK     BLANK     BLANK     BLANK     BLANK      BLANK
             // ╰─────────┴─────────┼─────────┼─────────┼─────────┤   ├─────────┼─────────┼─────────┴─────────┴─────────╯
                                      BLANK       BLANK      BLANK      BLANK       BLANK       BLANK
             //                     ╰─────────┴─────────┴─────────╯   ╰─────────┴─────────┴─────────╯
@@ -663,11 +688,11 @@
             label = "WMedia";
             bindings = <
             // ╭─────────┬─────────┬─────────┬─────────┬─────────╮   ╭─────────┬─────────┬─────────┬─────────┬─────────╮
-        BLANK   SYS_BOOT    BLANK   OS_TOGGLE   BLANK     BLANK      BLANK    MED_PREV MED_VOL_UP MED_NEXT    BLANK      BLANK
+        BLANK   SYS_BOOT    BLANK   OS_TOGGLE   BLANK     BLANK      BLANK    MED_PREV   MED_PLAY MED_NEXT    BLANK      BLANK
             // ├─────────┼─────────┼─────────┼─────────┼─────────┤   ├─────────┼─────────┼─────────┼─────────┼─────────┤
-        BLANK  WIN_OS_CTRL WIN_OS_ALT WIN_OS_GUI WIN_OS_SHFT  BLANK     BLANK   MED_VOL_DN MED_PLAY  MED_MUTE    BLANK      BLANK
+        BLANK  WIN_OS_CTRL WIN_OS_ALT WIN_OS_GUI WIN_OS_SHFT  BLANK     BLANK   MED_VOL_DN MED_MUTE  MED_VOL_UP    BLANK      BLANK
             // ├─────────┼─────────┼─────────┼─────────┼─────────┤   ├─────────┼─────────┼─────────┼─────────┼─────────┤
-        BLANK     BT_0      BT_1      BT_2      BT_3     BT_CLEAR     BLANK     BLANK     BLANK     BLANK     BLANK      BLANK
+        BLANK   BT_MAC_0   BT_WIN_1   BT_WIN_2   BT_WIN_3   BT_CLEAR    BLANK     BLANK     BLANK     BLANK     BLANK      BLANK
             // ╰─────────┴─────────┼─────────┼─────────┼─────────┤   ├─────────┼─────────┼─────────┴─────────┴─────────╯
                                      BLANK       BLANK      BLANK      BLANK       BLANK       BLANK
             //                     ╰─────────┴─────────┴─────────╯   ╰─────────┴─────────┴─────────╯
