@@ -7,6 +7,10 @@ manifest:
     # Additional modules containing boards/shields/custom code can be listed here as well
     # See https://docs.zephyrproject.org/3.2.0/develop/west/manifest.html#projects
   projects:
+    # Tracking `main` (currently Zephyr 4.1) rather than a release tag, so
+    # breaking changes land automatically. To pin instead, set this to a tag
+    # such as `v0.3` and match it in .github/workflows/build.yml.
+    # See https://zmk.dev/blog/2025/06/20/pinned-zmk
     - name: zmk
       remote: zmkfirmware
       revision: main
