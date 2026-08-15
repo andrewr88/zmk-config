@@ -457,7 +457,7 @@
 
         // MAC MODE LAYERS (0-7)
         mac_base_layer {
-            label = "Mac";
+            display-name = "Mac";
             bindings = <
             // ╭─────────┬─────────┬─────────┬─────────┬─────────╮   ╭─────────┬─────────┬─────────┬─────────┬─────────╮
         BLANK     KEY_Q     KEY_W     KEY_E     KEY_R     KEY_T         KEY_Y     KEY_U     KEY_I     KEY_O     KEY_P        BLANK
@@ -472,7 +472,7 @@
         };
 
         mac_symb_layer {
-            label = "Sym";
+            display-name = "Sym";
             bindings = <
             // ╭─────────┬─────────┬─────────┬─────────┬─────────╮   ╭─────────┬─────────┬─────────┬─────────┬─────────╮
         BLANK   SYM_MINUS SYM_UNDER SYM_EQUAL  SYM_PLUS  SYM_BSLH    MAC_UNDO  SYM_AMPS  SYM_ASTRK  KEY_DOT  MAC_PASTE   BLANK
@@ -487,7 +487,7 @@
         };
 
         mac_num_layer {
-            label = "Num";
+            display-name = "Num";
             bindings = <
             // ╭─────────┬─────────┬─────────┬─────────┬─────────╮   ╭─────────┬─────────┬─────────┬─────────┬─────────╮
         BLANK    KEY_TAB   NAV_LEFT   KEY_DOT  NAV_RIGHT SYM_UNDER MAC_VSC_EVAL  KEY_7     KEY_8     KEY_9    SYM_PLUS    BLANK
@@ -502,7 +502,7 @@
         };
 
         mac_fun_layer {
-            label = "Fun";
+            display-name = "Fun";
             bindings = <
             // ╭─────────┬─────────┬─────────┬─────────┬─────────╮   ╭─────────┬─────────┬─────────┬─────────┬─────────╮
         BLANK     KEY_1     KEY_2     KEY_3     KEY_4     KEY_5   MAC_NAVLH_KEY FUN_F7    FUN_F8    FUN_F9   FUN_F12     BLANK
@@ -517,7 +517,7 @@
         };
 
         mac_nav_layer {
-            label = "Nav";
+            display-name = "Nav";
             bindings = <
             // ╭─────────┬─────────┬─────────┬─────────┬─────────╮   ╭─────────┬─────────┬─────────┬─────────┬─────────╮
         BLANK    SW_WIN   TAB_PREV MAC_CLS_WIN TAB_NEXT   SW_APP    NAV_PGUP  NAV_HOME   NAV_UP    NAV_END  MAC_DWRD    BLANK
@@ -532,7 +532,7 @@
         };
 
         mac_navwin_layer {
-            label = "NavW";
+            display-name = "NavW";
             bindings = <
             // ╭─────────┬─────────┬─────────┬─────────┬─────────╮   ╭─────────┬─────────┬─────────┬─────────┬─────────╮
         BLANK     ALT_Q     ALT_W     ALT_F     ALT_P     ALT_B      ALT_J     ALT_N7    ALT_N8    ALT_N9    ALT_SQT    BLANK
@@ -547,7 +547,7 @@
         };
 
         mac_navlh_layer {
-            label = "NavL";
+            display-name = "NavL";
             bindings = <
             // ╭─────────┬─────────┬─────────┬─────────┬─────────╮   ╭─────────┬─────────┬─────────┬─────────┬─────────╮
         BLANK  MAC_BASE_KEY NAV_HOME   NAV_UP    NAV_END  NAV_PGUP     BLANK     BLANK     BLANK     BLANK     BLANK      BLANK
@@ -563,7 +563,7 @@
 
         // MAC MEDIA LAYER (7)
         mac_mdia_layer {
-            label = "Media";
+            display-name = "Media";
             bindings = <
             // ╭─────────┬─────────┬─────────┬─────────┬─────────╮   ╭─────────┬─────────┬─────────┬─────────┬─────────╮
         BLANK   SYS_BOOT    BLANK   OS_TOGGLE   BLANK     BLANK         BLANK    MED_PREV MED_PLAY  MED_NEXT    BLANK      BLANK
@@ -579,7 +579,7 @@
 
         // WINDOWS MODE LAYERS (8-15)
         win_base_layer {
-            label = "Win";
+            display-name = "Win";
             bindings = <
             // ╭─────────┬─────────┬─────────┬─────────┬─────────╮   ╭─────────┬─────────┬─────────┬─────────┬─────────╮
         BLANK     KEY_Q     KEY_W     KEY_E     KEY_R     KEY_T         KEY_Y     KEY_U     KEY_I     KEY_O     KEY_P        BLANK
@@ -594,7 +594,7 @@
         };
 
         win_symb_layer {
-            label = "WSym";
+            display-name = "WSym";
             bindings = <
             // ╭─────────┬─────────┬─────────┬─────────┬─────────╮   ╭─────────┬─────────┬─────────┬─────────┬─────────╮
         BLANK   SYM_MINUS SYM_UNDER SYM_EQUAL  SYM_PLUS  SYM_BSLH    WIN_UNDO  SYM_AMPS  SYM_ASTRK  KEY_DOT  WIN_PASTE   BLANK
@@ -609,7 +609,7 @@
         };
 
         win_num_layer {
-            label = "WNum";
+            display-name = "WNum";
             bindings = <
             // ╭─────────┬─────────┬─────────┬─────────┬─────────╮   ╭─────────┬─────────┬─────────┬─────────┬─────────╮
         BLANK    KEY_TAB   NAV_LEFT   KEY_DOT  NAV_RIGHT SYM_UNDER WIN_VSC_EVAL  KEY_7     KEY_8     KEY_9    SYM_PLUS    BLANK
@@ -624,7 +624,7 @@
         };
 
         win_fun_layer {
-            label = "WFun";
+            display-name = "WFun";
             bindings = <
             // ╭─────────┬─────────┬─────────┬─────────┬─────────╮   ╭─────────┬─────────┬─────────┬─────────┬─────────╮
         BLANK     KEY_1     KEY_2     KEY_3     KEY_4     KEY_5   WIN_NAVLH_KEY FUN_F7    FUN_F8    FUN_F9   FUN_F12     BLANK
@@ -639,7 +639,7 @@
         };
 
         win_nav_layer {
-            label = "WNav";
+            display-name = "WNav";
             bindings = <
             // ╭─────────┬─────────┬─────────┬─────────┬─────────╮   ╭─────────┬─────────┬─────────┬─────────┬─────────╮
         BLANK    SW_WIN   TAB_PREV WIN_CLS_WIN TAB_NEXT   SW_APP    NAV_PGUP  NAV_HOME   NAV_UP    NAV_END  WIN_DWRD    BLANK
@@ -654,7 +654,7 @@
         };
 
         win_navwin_layer {
-            label = "WNavW";
+            display-name = "WNavW";
             bindings = <
             // ╭─────────┬─────────┬─────────┬─────────┬─────────╮   ╭─────────┬─────────┬─────────┬─────────┬─────────╮
         BLANK     ALT_Q     ALT_W     ALT_F     ALT_P     ALT_B      ALT_J     ALT_N7    ALT_N8    ALT_N9    ALT_SQT    BLANK
@@ -669,7 +669,7 @@
         };
 
         win_navlh_layer {
-            label = "WNavL";
+            display-name = "WNavL";
             bindings = <
             // ╭─────────┬─────────┬─────────┬─────────┬─────────╮   ╭─────────┬─────────┬─────────┬─────────┬─────────╮
         BLANK  WIN_BASE_KEY NAV_HOME   NAV_UP    NAV_END  NAV_PGUP     BLANK     BLANK     BLANK     BLANK     BLANK      BLANK
@@ -685,7 +685,7 @@
 
         // WINDOWS MEDIA LAYER (15)
         win_mdia_layer {
-            label = "WMedia";
+            display-name = "WMedia";
             bindings = <
             // ╭─────────┬─────────┬─────────┬─────────┬─────────╮   ╭─────────┬─────────┬─────────┬─────────┬─────────╮
         BLANK   SYS_BOOT    BLANK   OS_TOGGLE   BLANK     BLANK      BLANK    MED_PREV   MED_PLAY MED_NEXT    BLANK      BLANK
